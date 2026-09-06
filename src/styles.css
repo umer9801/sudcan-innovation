@@ -1,0 +1,325 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background:           var(--background);
+  --color-foreground:           var(--foreground);
+  --color-card:                 var(--card);
+  --color-card-foreground:      var(--card-foreground);
+  --color-popover:              var(--popover);
+  --color-popover-foreground:   var(--popover-foreground);
+  --color-primary:              var(--primary);
+  --color-primary-foreground:   var(--primary-foreground);
+  --color-secondary:            var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:                var(--muted);
+  --color-muted-foreground:     var(--muted-foreground);
+  --color-accent:               var(--accent);
+  --color-accent-foreground:    var(--accent-foreground);
+  --color-destructive:          var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border:               var(--border);
+  --color-input:                var(--input);
+  --color-ring:                 var(--ring);
+  --color-wood:                 var(--wood);
+  --color-wood-foreground:      var(--wood-foreground);
+  --color-charcoal:             var(--charcoal);
+  --color-cream:                var(--cream);
+
+  /* ── Brand palette direct tokens ──────────────────────── */
+  --color-deep-olive:   #35483A;
+  --color-soft-olive:   #687967;
+  --color-warm-cream:   #F5F0E6;
+  --color-ivory:        #FFFDF8;
+  --color-brass:        #C6A15B;
+  --color-brand-red:    #B52E32;
+  --color-deep-charcoal:#202321;
+
+  /* ── Shadows ──────────────────────────────────────────── */
+  --shadow-elegant: 0 30px 60px -30px rgba(32,35,33,0.38);
+  --shadow-soft:    0 8px 30px -10px rgba(32,35,33,0.18);
+  --shadow-glow:    0 0 40px rgba(198,161,91,0.30);
+  --shadow-glow-red:0 0 40px rgba(181,46,50,0.25);
+
+  /* ── Clay shadows ─────────────────────────────────────── */
+  --shadow-clay:
+    0 2px 0 0 rgba(32,35,33,0.12),
+    0 8px 24px -4px rgba(32,35,33,0.16),
+    inset 0 0 0 1px rgba(255,255,255,0.28),
+    inset 0 1px 0 0 rgba(255,255,255,0.45);
+
+  --shadow-clay-lg:
+    0 4px 0 0 rgba(32,35,33,0.14),
+    0 16px 40px -8px rgba(32,35,33,0.20),
+    inset 0 0 0 1px rgba(255,255,255,0.22),
+    inset 0 2px 0 0 rgba(255,255,255,0.35);
+
+  --shadow-clay-dark:
+    0 4px 0 0 rgba(10,14,11,0.55),
+    0 12px 32px -6px rgba(10,14,11,0.42),
+    inset 0 0 0 1px rgba(255,255,255,0.09),
+    inset 0 1px 0 0 rgba(255,255,255,0.14);
+
+  --shadow-clay-red:
+    0 3px 0 0 rgba(130,20,23,0.75),
+    0 10px 28px -6px rgba(130,20,23,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.25),
+    inset 0 1px 0 0 rgba(255,255,255,0.40);
+
+  --shadow-clay-brass:
+    0 3px 0 0 rgba(160,120,45,0.75),
+    0 10px 28px -6px rgba(160,120,45,0.32),
+    inset 0 0 0 1px rgba(255,255,255,0.30),
+    inset 0 1px 0 0 rgba(255,255,255,0.50);
+
+  /* ── Gradients ────────────────────────────────────────── */
+  --gradient-warm:   linear-gradient(135deg, #F5F0E6 0%, #EDE7D6 100%);
+  --gradient-olive:  linear-gradient(135deg, #35483A 0%, #202321 100%);
+  --gradient-red:    linear-gradient(135deg, #B52E32 0%, #8f2125 100%);
+  --gradient-brass:  linear-gradient(135deg, #C6A15B 0%, #a8843e 100%);
+
+  /* ── Animations ───────────────────────────────────────── */
+  --animate-fade-up:  fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in:  fade-in 0.6s ease-out both;
+  --animate-shine:    shine 8s linear infinite;
+  --animate-marquee:  marquee 28s linear infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes shine {
+  from { background-position: 0% 50%; }
+  to   { background-position: 200% 50%; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════════════════════
+   ROOT TOKENS
+   primary   = Deep Olive  (#35483A)
+   accent    = Brass       (#C6A15B)
+   wood      = Brand Red   (#B52E32)  ← logo brand color
+   charcoal  = Deep Charcoal (#202321)
+   cream     = Warm Cream  (#F5F0E6)
+══════════════════════════════════════════════════════════ */
+:root {
+  --radius: 1rem;
+
+  --background:           #F5F0E6;   /* Warm Cream */
+  --foreground:           #202321;   /* Deep Charcoal */
+  --card:                 #EDEADE;   /* slightly richer cream */
+  --card-foreground:      #202321;
+  --popover:              #EDEADE;
+  --popover-foreground:   #202321;
+  --primary:              #35483A;   /* Deep Olive */
+  --primary-foreground:   #F5F0E6;   /* Warm Cream */
+  --secondary:            #EDE7D6;   /* off-cream */
+  --secondary-foreground: #35483A;
+  --muted:                #DDD8CB;
+  --muted-foreground:     #687967;   /* Soft Olive */
+  --accent:               #C6A15B;   /* Brass */
+  --accent-foreground:    #202321;
+  --destructive:          #B52E32;   /* Brand Red */
+  --destructive-foreground: #FFFDF8;
+  --border:               #C8C2B2;   /* warm parchment */
+  --input:                #DDD8CB;
+  --ring:                 #C6A15B;   /* Brass */
+
+  --wood:                 #B52E32;   /* Brand Red */
+  --wood-foreground:      #FFFDF8;
+  --charcoal:             #202321;
+  --cream:                #F5F0E6;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECTION BACKGROUND UTILITIES
+══════════════════════════════════════════════════════════ */
+@layer utilities {
+  /* Named palette classes */
+  .bg-section-cream   { background-color: #F5F0E6; }
+  .bg-section-ivory   { background-color: #FFFDF8; }
+  .bg-section-soft    { background-color: #EDE7D6; }
+  .bg-section-sage    { background-color: #D6DDD4; }
+  .bg-section-olive   { background-color: #35483A; }
+  .bg-section-dark    { background-color: #202321; }
+
+  /* Legacy section classes → remapped */
+  .bg-section-orange  { background-color: #EDE7D6; }
+  .bg-section-blue    { background-color: #F5F0E6; }
+  .bg-section-green   { background-color: #D6DDD4; }
+  .bg-section-purple  { background-color: #E8E3D8; }
+  .bg-section-yellow  { background-color: #EDE7D6; }
+  .bg-section-rose    { background-color: #F5F0E6; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   BASE
+══════════════════════════════════════════════════════════ */
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════════════════════ */
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+
+  /* ── Glass (cream-tinted) ─────────────────────────────── */
+  .glass {
+    background: rgba(245,240,230,0.75);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgba(198,161,91,0.22);
+  }
+  /* ── Glass dark (olive-tinted) ────────────────────────── */
+  .glass-dark {
+    background: rgba(32,35,33,0.58);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgba(198,161,91,0.28);
+  }
+
+  /* ── Claymorphism — cream card ────────────────────────── */
+  .clay {
+    border-radius: 1.25rem;
+    background: #EDEADE;
+    box-shadow: var(--shadow-clay);
+    border: 1px solid rgba(255,255,255,0.55);
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+  }
+  .clay:hover {
+    box-shadow:
+      0 2px 0 0 rgba(32,35,33,0.10),
+      0 14px 36px -4px rgba(32,35,33,0.20),
+      inset 0 0 0 1px rgba(255,255,255,0.32),
+      inset 0 2px 0 0 rgba(255,255,255,0.50);
+    transform: translateY(-4px);
+  }
+
+  /* ── Clay dark (olive card) ───────────────────────────── */
+  .clay-dark {
+    border-radius: 1.25rem;
+    background: #2C3C30;
+    box-shadow: var(--shadow-clay-dark);
+    border: 1px solid rgba(255,255,255,0.10);
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+  }
+  .clay-dark:hover {
+    box-shadow:
+      0 2px 0 0 rgba(10,14,11,0.65),
+      0 16px 40px -6px rgba(10,14,11,0.50),
+      inset 0 0 0 1px rgba(255,255,255,0.13),
+      inset 0 2px 0 0 rgba(255,255,255,0.18);
+    transform: translateY(-4px);
+  }
+
+  /* ── Clay red (brand red CTA card) ───────────────────── */
+  .clay-red {
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #B52E32 0%, #922428 100%);
+    box-shadow: var(--shadow-clay-red);
+    border: 1px solid rgba(255,255,255,0.22);
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+  }
+  .clay-red:hover {
+    box-shadow:
+      0 2px 0 0 rgba(130,20,23,0.80),
+      0 14px 32px -4px rgba(130,20,23,0.45),
+      inset 0 0 0 1px rgba(255,255,255,0.28),
+      inset 0 2px 0 0 rgba(255,255,255,0.45);
+    transform: translateY(-4px);
+  }
+
+  /* ── Clay brass (brass accent card) ──────────────────── */
+  .clay-brass {
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #C6A15B 0%, #a8843e 100%);
+    box-shadow: var(--shadow-clay-brass);
+    border: 1px solid rgba(255,255,255,0.32);
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+  }
+  .clay-brass:hover {
+    box-shadow:
+      0 2px 0 0 rgba(160,120,45,0.80),
+      0 14px 32px -4px rgba(160,120,45,0.45),
+      inset 0 0 0 1px rgba(255,255,255,0.38),
+      inset 0 2px 0 0 rgba(255,255,255,0.55);
+    transform: translateY(-4px);
+  }
+
+  /* ── Brass accent line ────────────────────────────────── */
+  .brass-line {
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C6A15B, transparent);
+    opacity: 0.55;
+  }
+
+  /* ── Shine text ───────────────────────────────────────── */
+  .shine-text {
+    background: linear-gradient(90deg, #C6A15B 0%, #35483A 30%, #C6A15B 60%, #687967 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 8s linear infinite;
+  }
+
+  /* ── Hover lift ───────────────────────────────────────── */
+  .hover-lift {
+    transition: transform .5s cubic-bezier(.22,1,.36,1), box-shadow .5s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* ── Text balance ─────────────────────────────────────── */
+  .text-balance { text-wrap: balance; }
+
+  /* ── Marquee ──────────────────────────────────────────── */
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+    will-change: transform;
+  }
+  .animate-marquee:hover { animation-play-state: paused; }
+
+  @media (max-width: 768px) {
+    .animate-marquee { animation-duration: 8s; }
+  }
+}
