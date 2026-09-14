@@ -10,17 +10,29 @@ import { submitContact } from "@/lib/api/contact";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Sudcan Innovation Inc" },
+      { title: "Contact Sudcan Painting | Free Quotes Kitchener-Waterloo | (226) 600-6637" },
       {
         name: "description",
         content:
-          "Get a free renovation or flooring quote. Reach Sudcan by phone, email, or our online form. Based in Kitchener, ON.",
+          "Contact Sudcan Painting for free renovation & painting quotes. Serving Kitchener-Waterloo, ON. Call (226) 600-6637 or email sudcaninfo@gmail.com. Response within 24 hours.",
       },
-      { property: "og:title", content: "Contact Sudcan" },
-      {
-        property: "og:description",
-        content: "Tell us about your project — we respond within one business day.",
-      },
+      { name: "keywords", content: "contact Sudcan Painting, painting quotes Kitchener, free estimate Waterloo, painters near me, 286 Driftwood Dr Kitchener" },
+      
+      // Open Graph
+      { property: "og:title", content: "Contact Sudcan Painting | Kitchener-Waterloo" },
+      { property: "og:description", content: "Get in touch for free quotes. Serving Kitchener-Waterloo. Call (226) 600-6637 today." },
+      { property: "og:url", content: "https://www.sudcanpainting.com/contact" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Sudcan Painting" },
+      { property: "og:locale", content: "en_CA" },
+      
+      // Twitter Card
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Contact Sudcan Painting" },
+      { name: "twitter:description", content: "Get free quotes for painting & renovation. Serving Kitchener-Waterloo. Call (226) 600-6637." },
+      
+      // Canonical
+      { rel: "canonical", href: "https://www.sudcanpainting.com/contact" },
     ],
   }),
   component: ContactPage,

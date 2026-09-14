@@ -36,17 +36,33 @@ const portfolioImages = [port1, port2, port3, port4, port5, port6, port7, port8,
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sudcan Innovation Inc — Professional Painting & Renovation" },
+      { 
+        title: "Professional Painting Services Kitchener ON | Residential & Commercial | Sudcan Painting" 
+      },
       {
         name: "description",
         content:
-          "Professional painting, renovation, and flooring services across Canada. Fresh colours, flawless finishes, and lasting results.",
+          "Professional painting, renovation & flooring services in Kitchener-Waterloo, Ontario. 18+ years experience. Licensed, insured painters. Free quotes. Call (226) 600-6637 today.",
       },
-      { property: "og:title", content: "Sudcan Innovation Inc" },
-      {
-        property: "og:description",
-        content: "Professional painting & renovation services crafted with precision.",
-      },
+      { name: "keywords", content: "painting services Kitchener, house painters Waterloo, interior painting Ontario, exterior painting Cambridge, cabinet refinishing, home renovation Kitchener" },
+      
+      // Open Graph
+      { property: "og:title", content: "Professional Painting Services Kitchener ON | Sudcan Painting" },
+      { property: "og:description", content: "Professional painting, renovation & flooring in Kitchener-Waterloo. 18+ years experience. Licensed painters. Free quotes." },
+      { property: "og:image", content: "https://www.sudcanpainting.com/og-image.jpg" },
+      { property: "og:url", content: "https://www.sudcanpainting.com/" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Sudcan Painting" },
+      { property: "og:locale", content: "en_CA" },
+      
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Professional Painting Services Kitchener ON | Sudcan Painting" },
+      { name: "twitter:description", content: "Professional painting, renovation & flooring in Kitchener-Waterloo. 18+ years experience." },
+      { name: "twitter:image", content: "https://www.sudcanpainting.com/og-image.jpg" },
+      
+      // Canonical
+      { rel: "canonical", href: "https://www.sudcanpainting.com/" },
     ],
   }),
   component: HomePage,

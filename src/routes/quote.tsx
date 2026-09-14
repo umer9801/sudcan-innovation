@@ -10,17 +10,29 @@ import { submitQuote } from "@/lib/api/quote";
 export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
-      { title: "Get a Free Quote — Sudcan Innovation Inc" },
+      { title: "Free Painting Quote Kitchener ON | Get Estimate in 24hrs | Sudcan Painting" },
       {
         name: "description",
         content:
-          "Request a detailed, free renovation or flooring quote. Tell us about your project and get a transparent estimate within one business day.",
+          "Request a free, detailed painting or renovation quote. Transparent pricing, no surprises. Serving Kitchener-Waterloo. Get your estimate within 24 hours. Licensed & insured.",
       },
-      { property: "og:title", content: "Free Quote — Sudcan" },
-      {
-        property: "og:description",
-        content: "Get a detailed, transparent quote for your renovation or flooring project.",
-      },
+      { name: "keywords", content: "free painting quote Kitchener, renovation estimate Waterloo, painting cost, free consultation, transparent pricing" },
+      
+      // Open Graph
+      { property: "og:title", content: "Free Painting Quote Kitchener | Sudcan Painting" },
+      { property: "og:description", content: "Get a detailed, transparent quote for your painting or renovation project. Response within 24 hours." },
+      { property: "og:url", content: "https://www.sudcanpainting.com/quote" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Sudcan Painting" },
+      { property: "og:locale", content: "en_CA" },
+      
+      // Twitter Card
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Free Painting Quote | Sudcan Painting" },
+      { name: "twitter:description", content: "Get a free, detailed quote for your painting project. Response in 24 hours." },
+      
+      // Canonical
+      { rel: "canonical", href: "https://www.sudcanpainting.com/quote" },
     ],
   }),
   component: QuotePage,

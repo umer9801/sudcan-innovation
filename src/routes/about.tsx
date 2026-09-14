@@ -17,18 +17,31 @@ const ourWorkImages = [work1, work2, work3, work4, work5, work6];
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Sudcan Innovation Inc" },
+      { title: "About Sudcan Painting | 18+ Years Serving Kitchener-Waterloo | Licensed Painters" },
       {
         name: "description",
         content:
-          "A team of skilled craftsmen building beautiful, durable spaces. Learn about our story, mission, and certifications.",
+          "Meet the Sudcan Painting team. 18+ years of professional painting & renovation experience in Kitchener-Waterloo. Licensed, insured, customer-first approach. 540+ completed projects.",
       },
-      { property: "og:title", content: "About Sudcan Innovation Inc" },
-      {
-        property: "og:description",
-        content: "Skilled craftsmen, premium materials, customer-first renovation.",
-      },
+      { name: "keywords", content: "about Sudcan Painting, painters Kitchener, renovation company Waterloo, licensed painters Ontario, painting contractors" },
+      
+      // Open Graph
+      { property: "og:title", content: "About Sudcan Painting | 18+ Years Experience Kitchener-Waterloo" },
+      { property: "og:description", content: "Skilled craftsmen, premium materials, customer-first renovation. 18+ years serving Kitchener-Waterloo with professional painting services." },
       { property: "og:image", content: craftsman },
+      { property: "og:url", content: "https://www.sudcanpainting.com/about" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Sudcan Painting" },
+      { property: "og:locale", content: "en_CA" },
+      
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About Sudcan Painting | 18+ Years Experience" },
+      { name: "twitter:description", content: "Professional painting & renovation team serving Kitchener-Waterloo for 18+ years." },
+      { name: "twitter:image", content: craftsman },
+      
+      // Canonical
+      { rel: "canonical", href: "https://www.sudcanpainting.com/about" },
     ],
   }),
   component: AboutPage,

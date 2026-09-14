@@ -4,6 +4,12 @@ import { verifyAdminLogin } from "../../lib/api/admin";
 import logo from "@/assets/log.jpeg";
 
 export const Route = createFileRoute("/admin/login")({
+  head: () => ({
+    meta: [
+      { name: "robots", content: "noindex, nofollow" },
+      { title: "Admin Login - Sudcan Painting" },
+    ],
+  }),
   component: AdminLogin,
 });
 

@@ -7,6 +7,12 @@ import { StatusBadge } from "@/components/admin/StatusBadge";
 import { formatDate } from "@/lib/admin-utils";
 
 export const Route = createFileRoute("/admin/contacts")({
+  head: () => ({
+    meta: [
+      { name: "robots", content: "noindex, nofollow" },
+      { title: "Contact Management - Admin - Sudcan Painting" },
+    ],
+  }),
   beforeLoad: () => {
     if (typeof document !== "undefined") {
       const authed = document.cookie.includes("admin_authed=1");

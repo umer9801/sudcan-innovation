@@ -14,6 +14,12 @@ import { StatCard } from "@/components/admin/StatCard";
 import { RecentTable } from "@/components/admin/RecentTable";
 
 export const Route = createFileRoute("/admin/")({
+  head: () => ({
+    meta: [
+      { name: "robots", content: "noindex, nofollow" },
+      { title: "Admin Dashboard - Sudcan Painting" },
+    ],
+  }),
   beforeLoad: ({ context }) => {
     // Simple session check via cookie
     if (typeof document !== "undefined") {

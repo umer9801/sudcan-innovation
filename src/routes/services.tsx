@@ -24,17 +24,29 @@ import afterImg from "@/assets/10.jpeg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Sudcan Innovation Inc" },
+      { title: "Painting & Renovation Services | Interior, Exterior, Flooring | Kitchener ON - Sudcan Painting" },
       {
         name: "description",
         content:
-          "Professional painting, renovation, and flooring services across Canada.",
+          "Professional painting & renovation services in Kitchener-Waterloo. Interior/exterior painting, cabinet refinishing, flooring, kitchen & bathroom remodeling. Licensed, insured. Free quotes.",
       },
-      { property: "og:title", content: "Our Services — Sudcan" },
-      {
-        property: "og:description",
-        content: "End-to-end painting and renovation for residential and commercial.",
-      },
+      { name: "keywords", content: "painting services Kitchener, interior painting, exterior painting, cabinet refinishing, hardwood flooring, kitchen remodeling Waterloo, bathroom renovation" },
+      
+      // Open Graph
+      { property: "og:title", content: "Painting & Renovation Services Kitchener ON | Sudcan Painting" },
+      { property: "og:description", content: "Interior/exterior painting, flooring, kitchen & bathroom renovation. Professional service in Kitchener-Waterloo. Free quotes." },
+      { property: "og:url", content: "https://www.sudcanpainting.com/services" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Sudcan Painting" },
+      { property: "og:locale", content: "en_CA" },
+      
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Painting & Renovation Services | Sudcan Painting" },
+      { name: "twitter:description", content: "Professional painting, renovation & flooring services in Kitchener-Waterloo. Free quotes." },
+      
+      // Canonical
+      { rel: "canonical", href: "https://www.sudcanpainting.com/services" },
     ],
   }),
   component: ServicesPage,

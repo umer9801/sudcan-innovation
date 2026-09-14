@@ -1,0 +1,11 @@
+# robots.txt for sudcanpainting.com
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /admin
+
+# Sitemap location
+Sitemap: https://www.sudcanpainting.com/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1

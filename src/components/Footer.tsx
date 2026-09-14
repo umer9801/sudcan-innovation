@@ -22,17 +22,17 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img
                 src={logo}
-                alt="Sudcan Innovation Inc"
+                alt="Sudcan Painting"
                 className="h-12 w-12 rounded-xl object-cover"
                 style={{ boxShadow: "0 4px 12px rgba(32,35,33,0.5)" }}
               />
               <span className="font-display text-2xl text-[#F5F0E6]">
-                Sudcan Innovation Inc
+                Sudcan Painting
               </span>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-[#687967]">
-              Premium renovation and flooring craftsmanship for residential and
-              commercial projects. Built on precision, delivered with style.
+              Professional painting and renovation services for residential and
+              commercial projects in Kitchener-Waterloo. Built on precision, delivered with excellence.
             </p>
 
             {/* Social icons */}
@@ -115,7 +115,7 @@ export function Footer() {
           style={{ borderTop: "1px solid rgba(198,161,91,0.22)" }}
         >
           <p className="text-[#F5F0E6]/50">
-            © {new Date().getFullYear()} Sudcan Innovation Inc. All rights reserved.
+            © {new Date().getFullYear()} Sudcan Painting. All rights reserved.
           </p>
           <p>
             Designed by{" "}

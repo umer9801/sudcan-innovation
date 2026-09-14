@@ -7,6 +7,12 @@ import { StatusBadge } from "../../components/admin/StatusBadge";
 import { formatBudget, formatDate, formatProjectType } from "../../lib/admin-utils";
 
 export const Route = createFileRoute("/admin/quotes")({
+  head: () => ({
+    meta: [
+      { name: "robots", content: "noindex, nofollow" },
+      { title: "Quote Management - Admin - Sudcan Painting" },
+    ],
+  }),
   beforeLoad: () => {
     if (typeof document !== "undefined") {
       const authed = document.cookie.includes("admin_authed=1");

@@ -56,7 +56,7 @@ export function Navbar() {
           <span className="font-display text-lg leading-none tracking-tight text-[#F5F0E6]">
             Sudcan
             <span className="block text-[10px] uppercase tracking-[0.2em] text-[#687967]">
-              Innovation Inc
+              Painting
             </span>
           </span>
         </Link>
