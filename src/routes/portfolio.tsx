@@ -36,7 +36,7 @@ export const Route = createFileRoute("/portfolio")({
         content:
           "View our completed painting & renovation projects in Kitchener-Waterloo. Before & after photos of interior painting, exterior painting, cabinet refinishing, flooring & kitchen/bathroom renovations.",
       },
-      { name: "keywords", content: "painting portfolio Kitchener, before after photos, renovation gallery, completed projects Waterloo, painting examples" },
+      { name: "keywords", content: "painting portfolio Kitchener, before after photos, renovation gallery, completed projects Waterloo, painting examples, real project photos, verified work Ontario, trusted painters near me" },
       
       // Open Graph
       { property: "og:title", content: "Portfolio - Sudcan Painting Projects | Kitchener ON" },

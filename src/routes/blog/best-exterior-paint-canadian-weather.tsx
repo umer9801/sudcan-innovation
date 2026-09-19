@@ -8,7 +8,7 @@ export const Route = createFileRoute("/blog/best-exterior-paint-canadian-weather
     meta: [
       { title: "Best Exterior Paint for Canadian Weather 2026 | Tested Recommendations" },
       { name: "description", content: "Which exterior paint survives Ontario winters? Tested recommendations for Canadian weather, climate zones, and durability. Expert advice from Kitchener-Waterloo painters." },
-      { name: "keywords", content: "best exterior paint Canada, exterior paint Ontario, cold weather paint, durable exterior paint, Canadian climate paint" },
+      { name: "keywords", content: "best exterior paint Canada, exterior paint Ontario, cold weather paint, durable exterior paint, Canadian climate paint, winter-proof paint, weather resistant coating, premium exterior paint Ontario" },
       { property: "og:title", content: "Best Exterior Paint for Canadian Weather 2026" },
       { property: "og:url", content: "https://www.sudcanpainting.com/blog/best-exterior-paint-canadian-weather" },
       { property: "og:type", content: "article" },

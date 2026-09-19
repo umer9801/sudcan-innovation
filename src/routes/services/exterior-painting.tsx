@@ -14,7 +14,7 @@ export const Route = createFileRoute("/services/exterior-painting")({
         content:
           "Professional exterior house painting in Kitchener-Waterloo. Weather-resistant coatings, power washing, expert prep. Stand up to Canadian winters. Free quotes. (226) 600-6637.",
       },
-      { name: "keywords", content: "exterior painting Kitchener, house painting Waterloo, exterior painters, siding painting, deck staining, fence painting, pressure washing" },
+      { name: "keywords", content: "exterior painting Kitchener, house painting Waterloo, exterior painters, siding painting, deck staining, fence painting, pressure washing, weather-resistant paint, durable exterior coating Ontario" },
       
       // Open Graph
       { property: "og:title", content: "Exterior Painting Services Kitchener | Sudcan Painting" },

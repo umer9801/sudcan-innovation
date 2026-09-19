@@ -30,7 +30,7 @@ export const Route = createFileRoute("/services")({
         content:
           "Professional painting & renovation services in Kitchener-Waterloo. Interior/exterior painting, cabinet refinishing, flooring, kitchen & bathroom remodeling. Licensed, insured. Free quotes.",
       },
-      { name: "keywords", content: "painting services Kitchener, interior painting, exterior painting, cabinet refinishing, hardwood flooring, kitchen remodeling Waterloo, bathroom renovation" },
+      { name: "keywords", content: "painting services Kitchener, interior painting, exterior painting, cabinet refinishing, hardwood flooring, kitchen remodeling Waterloo, bathroom renovation, licensed painters Ontario, professional painting contractors, residential painters near me, commercial painting services" },
       
       // Open Graph
       { property: "og:title", content: "Painting & Renovation Services Kitchener ON | Sudcan Painting" },
@@ -112,15 +112,15 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { icon: Brush,       title: "Interior Painting",   desc: "Walls, ceilings, trim, and doors — flawless finish from primer to topcoat.",             num: "01" },
-  { icon: PaintBucket, title: "Exterior Painting",   desc: "Weather-resistant coatings that protect your property and boost curb appeal.",           num: "02" },
-  { icon: Sparkles,    title: "Cabinet Refinishing",  desc: "Spray-painted cabinets with a factory-smooth finish at a fraction of replacement cost.", num: "03" },
-  { icon: Layers,      title: "Hardwood Flooring",   desc: "Wide-plank European oak, walnut, and engineered hardwood.",                             num: "04" },
-  { icon: Square,      title: "Vinyl Flooring",      desc: "Luxury vinyl plank with realistic textures and lifetime durability.",                    num: "05" },
-  { icon: PaintBucket, title: "Tile Installation",   desc: "Porcelain, ceramic, and natural stone — laid with millimetre precision.",                num: "06" },
-  { icon: HomeIcon,    title: "Home Renovation",     desc: "Whole-home transformations, design-build, and additions.",                              num: "07" },
-  { icon: ChefHat,     title: "Kitchen Remodeling",  desc: "Custom cabinetry, stone surfaces, and chef-grade layouts.",                             num: "08" },
-  { icon: Bath,        title: "Bathroom Renovation", desc: "Spa-grade bathrooms with curbless showers and heated floors.",                          num: "09" },
+  { icon: Brush,       title: "Interior Painting",   desc: "Walls, ceilings, trim, and doors — flawless finish from primer to topcoat.",             num: "01", link: "/services/interior-painting" },
+  { icon: PaintBucket, title: "Exterior Painting",   desc: "Weather-resistant coatings that protect your property and boost curb appeal.",           num: "02", link: "/services/exterior-painting" },
+  { icon: Sparkles,    title: "Cabinet Refinishing",  desc: "Spray-painted cabinets with a factory-smooth finish at a fraction of replacement cost.", num: "03", link: "/services/cabinet-refinishing" },
+  { icon: Layers,      title: "Hardwood Flooring",   desc: "Wide-plank European oak, walnut, and engineered hardwood.",                             num: "04", link: "/services/hardwood-flooring" },
+  { icon: Square,      title: "Vinyl Flooring",      desc: "Luxury vinyl plank with realistic textures and lifetime durability.",                    num: "05", link: "/services/vinyl-flooring" },
+  { icon: PaintBucket, title: "Tile Installation",   desc: "Porcelain, ceramic, and natural stone — laid with millimetre precision.",                num: "06", link: "/services/tile-installation" },
+  { icon: HomeIcon,    title: "Home Renovation",     desc: "Whole-home transformations, design-build, and additions.",                              num: "07", link: "/services/home-renovation" },
+  { icon: ChefHat,     title: "Kitchen Remodeling",  desc: "Custom cabinetry, stone surfaces, and chef-grade layouts.",                             num: "08", link: "/services/kitchen-remodeling" },
+  { icon: Bath,        title: "Bathroom Renovation", desc: "Spa-grade bathrooms with curbless showers and heated floors.",                          num: "09", link: "/services/bathroom-renovation" },
 ];
 
 // Alternating card backgrounds for visual rhythm
@@ -197,7 +197,8 @@ function ServicesPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.05}>
-                <div
+                <Link
+                  to={s.link}
                   className="group relative flex h-full flex-col overflow-hidden p-7 transition-all hover:-translate-y-1"
                   style={{
                     borderRadius: "1.25rem",
@@ -232,13 +233,10 @@ function ServicesPage() {
                   </div>
                   <h3 className="mt-5 font-display text-xl text-[#202321]">{s.title}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-[#687967]">{s.desc}</p>
-                  <Link
-                    to="/quote"
-                    className="mt-6 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#B52E32]/60 transition-colors group-hover:text-[#B52E32]"
-                  >
-                    Get a quote <ArrowRight size={12} />
-                  </Link>
-                </div>
+                  <div className="mt-6 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#B52E32]/60 transition-colors group-hover:text-[#B52E32]">
+                    Learn more <ArrowRight size={12} />
+                  </div>
+                </Link>
               </Reveal>
             ))}
           </div>

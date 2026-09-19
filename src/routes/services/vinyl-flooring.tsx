@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services/vinyl-flooring")({
     meta: [
       { title: "Luxury Vinyl Flooring Installation Kitchener | LVP & LVT | Sudcan Painting" },
       { name: "description", content: "Luxury vinyl plank (LVP) installation in Kitchener-Waterloo. Waterproof, durable, realistic wood look. Expert installation. Free quotes. (226) 600-6637." },
-      { name: "keywords", content: "vinyl flooring Kitchener, LVP installation Waterloo, luxury vinyl plank, waterproof flooring, vinyl tile installation" },
+      { name: "keywords", content: "vinyl flooring Kitchener, LVP installation Waterloo, luxury vinyl plank, waterproof flooring, vinyl tile installation, durable flooring Ontario, affordable vinyl flooring" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/vinyl-flooring" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/vinyl-flooring" },
     ],

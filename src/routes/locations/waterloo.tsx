@@ -8,7 +8,7 @@ export const Route = createFileRoute("/locations/waterloo")({
     meta: [
       { title: "Painters Waterloo ON | Professional Painting Services | Sudcan Painting" },
       { name: "description", content: "Top-rated painters in Waterloo, ON. Interior, exterior, renovation. Serving Uptown, Beechwood, Lakeshore. Free quotes. (226) 600-6637." },
-      { name: "keywords", content: "painters Waterloo, painting services Waterloo ON, house painters Waterloo, Waterloo painters, interior painting Waterloo" },
+      { name: "keywords", content: "painters Waterloo, painting services Waterloo ON, house painters Waterloo, Waterloo painters, interior painting Waterloo, residential painters Waterloo, affordable painters near me, licensed painters Waterloo, Uptown Waterloo painters, Beechwood painters" },
       { property: "og:url", content: "https://www.sudcanpainting.com/locations/waterloo" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/locations/waterloo" },
     ],

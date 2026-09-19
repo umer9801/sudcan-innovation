@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services/hardwood-flooring")({
     meta: [
       { title: "Hardwood Flooring Installation Kitchener | European Oak & Walnut | Sudcan" },
       { name: "description", content: "Professional hardwood floor installation in Kitchener-Waterloo. European oak, walnut, engineered wide-plank. Expert installation. Free quotes. (226) 600-6637." },
-      { name: "keywords", content: "hardwood flooring Kitchener, hardwood installation Waterloo, oak flooring, engineered hardwood, floor refinishing" },
+      { name: "keywords", content: "hardwood flooring Kitchener, hardwood installation Waterloo, oak flooring, engineered hardwood, floor refinishing, wide plank flooring, European oak Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/hardwood-flooring" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/hardwood-flooring" },
     ],

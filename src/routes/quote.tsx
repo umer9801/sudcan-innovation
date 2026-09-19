@@ -16,7 +16,7 @@ export const Route = createFileRoute("/quote")({
         content:
           "Request a free, detailed painting or renovation quote. Transparent pricing, no surprises. Serving Kitchener-Waterloo. Get your estimate within 24 hours. Licensed & insured.",
       },
-      { name: "keywords", content: "free painting quote Kitchener, renovation estimate Waterloo, painting cost, free consultation, transparent pricing" },
+      { name: "keywords", content: "free painting quote Kitchener, renovation estimate Waterloo, painting cost, free consultation, transparent pricing, affordable painters, same day quote, professional estimate Ontario" },
       
       // Open Graph
       { property: "og:title", content: "Free Painting Quote Kitchener | Sudcan Painting" },

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/blog/how-to-choose-paint-colors")({
         name: "description",
         content: "Professional colour consultation tips for choosing paint colors. Learn how lighting, room size, and décor affect your perfect shade. Free colour advice from Sudcan Painting.",
       },
-      { name: "keywords", content: "choose paint colors, colour consultation, paint color tips, interior design Kitchener, best paint colors 2026" },
+      { name: "keywords", content: "choose paint colors, colour consultation, paint color tips, interior design Kitchener, best paint colors 2026, color selection guide, paint matching service, professional color advice Ontario" },
       { property: "og:title", content: "How to Choose Paint Colors That Actually Work" },
       { property: "og:description", content: "Expert tips for choosing the perfect paint colors for your home." },
       { property: "og:url", content: "https://www.sudcanpainting.com/blog/how-to-choose-paint-colors" },

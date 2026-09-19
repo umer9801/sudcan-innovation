@@ -8,7 +8,7 @@ export const Route = createFileRoute("/blog/cabinet-refinishing-vs-replace")({
     meta: [
       { title: "Cabinet Refinishing vs Replace: Cost Comparison 2026 | Sudcan Painting" },
       { name: "description", content: "Cabinet refinishing vs replacement cost guide. When to refinish, when to replace, and how to save thousands on your kitchen renovation in Kitchener-Waterloo." },
-      { name: "keywords", content: "cabinet refinishing cost, replace cabinets cost, kitchen cabinet options Kitchener, refinish vs replace cabinets" },
+      { name: "keywords", content: "cabinet refinishing cost, replace cabinets cost, kitchen cabinet options Kitchener, refinish vs replace cabinets, affordable kitchen update, cabinet painting Waterloo, save money kitchen renovation Ontario" },
       { property: "og:title", content: "Cabinet Refinishing vs Replace: Which Saves More?" },
       { property: "og:url", content: "https://www.sudcanpainting.com/blog/cabinet-refinishing-vs-replace" },
       { property: "og:type", content: "article" },

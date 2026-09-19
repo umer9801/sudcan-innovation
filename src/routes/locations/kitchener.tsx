@@ -14,7 +14,7 @@ export const Route = createFileRoute("/locations/kitchener")({
         content:
           "Top-rated painting services in Kitchener, ON. Interior, exterior, cabinet refinishing. 18+ years serving Kitchener homes & businesses. Free quotes. (226) 600-6637.",
       },
-      { name: "keywords", content: "painters Kitchener, painting services Kitchener ON, house painters Kitchener, interior painting Kitchener, exterior painting Kitchener, Kitchener painters" },
+      { name: "keywords", content: "painters Kitchener, painting services Kitchener ON, house painters Kitchener, interior painting Kitchener, exterior painting Kitchener, Kitchener painters, affordable painters near me, residential painters Kitchener, commercial painters Kitchener, local painting contractors, best painters Kitchener Ontario" },
       
       // Open Graph
       { property: "og:title", content: "Professional Painters Kitchener ON | Sudcan Painting" },

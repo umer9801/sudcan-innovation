@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services/bathroom-renovation")({
     meta: [
       { title: "Bathroom Renovation Kitchener | Spa-Grade Bathroom Remodeling | Sudcan" },
       { name: "description", content: "Professional bathroom renovation in Kitchener-Waterloo. Curbless showers, heated floors, premium tile. Spa-grade bathrooms. Free quotes. (226) 600-6637." },
-      { name: "keywords", content: "bathroom renovation Kitchener, bathroom remodeling Waterloo, shower installation, bathroom contractors, tile installation" },
+      { name: "keywords", content: "bathroom renovation Kitchener, bathroom remodeling Waterloo, shower installation, bathroom contractors, tile installation, spa bathroom, luxury bathroom design Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/bathroom-renovation" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/bathroom-renovation" },
     ],

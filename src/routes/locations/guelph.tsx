@@ -8,7 +8,7 @@ export const Route = createFileRoute("/locations/guelph")({
     meta: [
       { title: "Painters Guelph ON | Professional Painting Services | Sudcan Painting" },
       { name: "description", content: "Professional painting services in Guelph, ON. Interior, exterior, renovations. Serving downtown Guelph and surrounding areas. Free quotes. (226) 600-6637." },
-      { name: "keywords", content: "painters Guelph, painting services Guelph ON, house painters Guelph, Guelph painters, interior painting Guelph" },
+      { name: "keywords", content: "painters Guelph, painting services Guelph ON, house painters Guelph, Guelph painters, interior painting Guelph, affordable painters Guelph, residential painters Guelph, downtown Guelph painters, licensed painters Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/locations/guelph" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/locations/guelph" },
     ],

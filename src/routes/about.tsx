@@ -23,7 +23,7 @@ export const Route = createFileRoute("/about")({
         content:
           "Meet the Sudcan Painting team. 18+ years of professional painting & renovation experience in Kitchener-Waterloo. Licensed, insured, customer-first approach. 540+ completed projects.",
       },
-      { name: "keywords", content: "about Sudcan Painting, painters Kitchener, renovation company Waterloo, licensed painters Ontario, painting contractors" },
+      { name: "keywords", content: "about Sudcan Painting, painters Kitchener, renovation company Waterloo, licensed painters Ontario, painting contractors, experienced painters, trusted contractors, 18 years experience, 540+ projects completed" },
       
       // Open Graph
       { property: "og:title", content: "About Sudcan Painting | 18+ Years Experience Kitchener-Waterloo" },

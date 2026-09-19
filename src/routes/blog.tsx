@@ -12,7 +12,7 @@ export const Route = createFileRoute("/blog")({
         content:
           "Expert advice on painting, renovation, and home improvement. Tips, cost guides, and how-to articles from professional painters in Kitchener-Waterloo.",
       },
-      { name: "keywords", content: "painting tips, renovation guides, home improvement blog, painting cost Kitchener, DIY advice" },
+      { name: "keywords", content: "painting tips, renovation guides, home improvement blog, painting cost Kitchener, DIY advice, professional painting advice, color selection tips, renovation budget guide Ontario" },
       
       // Open Graph
       { property: "og:title", content: "Painting & Renovation Blog | Sudcan Painting" },

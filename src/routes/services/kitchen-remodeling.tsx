@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services/kitchen-remodeling")({
     meta: [
       { title: "Kitchen Remodeling Kitchener | Custom Kitchen Renovation | Sudcan Painting" },
       { name: "description", content: "Professional kitchen remodeling in Kitchener-Waterloo. Custom cabinetry, stone countertops, expert design. Transform your kitchen. Free quotes. (226) 600-6637." },
-      { name: "keywords", content: "kitchen renovation Kitchener, kitchen remodeling Waterloo, custom kitchen, kitchen design, kitchen contractors" },
+      { name: "keywords", content: "kitchen renovation Kitchener, kitchen remodeling Waterloo, custom kitchen, kitchen design, kitchen contractors, affordable kitchen update, modern kitchen design Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/kitchen-remodeling" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/kitchen-remodeling" },
     ],

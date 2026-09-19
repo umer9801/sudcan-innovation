@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services/home-renovation")({
     meta: [
       { title: "Home Renovation Kitchener | Whole Home Remodeling | Sudcan Painting" },
       { name: "description", content: "Complete home renovation in Kitchener-Waterloo. Design-build, additions, full home transformations. Concept to keys-in-hand. Free consultation. (226) 600-6637." },
-      { name: "keywords", content: "home renovation Kitchener, home remodeling Waterloo, house renovation, general contractor, design-build, home additions" },
+      { name: "keywords", content: "home renovation Kitchener, home remodeling Waterloo, house renovation, general contractor, design-build, home additions, whole home renovation Ontario, renovation contractors" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/home-renovation" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/home-renovation" },
     ],

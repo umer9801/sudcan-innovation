@@ -44,7 +44,7 @@ export const Route = createFileRoute("/")({
         content:
           "Professional painting, renovation & flooring services in Kitchener-Waterloo, Ontario. 18+ years experience. Licensed, insured painters. Free quotes. Call (226) 600-6637 today.",
       },
-      { name: "keywords", content: "painting services Kitchener, house painters Waterloo, interior painting Ontario, exterior painting Cambridge, cabinet refinishing, home renovation Kitchener" },
+      { name: "keywords", content: "painting services Kitchener, house painters Waterloo, interior painting Ontario, exterior painting Cambridge, cabinet refinishing, home renovation Kitchener, affordable painters near me, licensed painting contractors, residential painters Waterloo, commercial painters Ontario, free painting quote Kitchener" },
       
       // Open Graph
       { property: "og:title", content: "Professional Painting Services Kitchener ON | Sudcan Painting" },

@@ -8,7 +8,7 @@ export const Route = createFileRoute("/locations/cambridge")({
     meta: [
       { title: "Painters Cambridge ON | Professional Painting Services | Sudcan Painting" },
       { name: "description", content: "Professional painters in Cambridge, ON. Interior, exterior, cabinet refinishing. Serving Galt, Preston, Hespeler. Free quotes. (226) 600-6637." },
-      { name: "keywords", content: "painters Cambridge, painting services Cambridge ON, house painters Cambridge, Cambridge painters, Galt painters, Preston painters" },
+      { name: "keywords", content: "painters Cambridge, painting services Cambridge ON, house painters Cambridge, Cambridge painters, Galt painters, Preston painters, Hespeler painters, affordable painters Cambridge, residential painting Cambridge Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/locations/cambridge" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/locations/cambridge" },
     ],

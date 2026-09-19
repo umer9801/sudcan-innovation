@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services/tile-installation")({
     meta: [
       { title: "Tile Installation Kitchener | Porcelain, Ceramic & Natural Stone | Sudcan" },
       { name: "description", content: "Professional tile installation in Kitchener-Waterloo. Porcelain, ceramic, natural stone. Millimetre precision. Bathrooms, kitchens, floors. (226) 600-6637." },
-      { name: "keywords", content: "tile installation Kitchener, tile contractors Waterloo, porcelain tile, ceramic tile, backsplash installation, shower tile" },
+      { name: "keywords", content: "tile installation Kitchener, tile contractors Waterloo, porcelain tile, ceramic tile, backsplash installation, shower tile, natural stone tile Ontario, professional tile installers" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/tile-installation" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/tile-installation" },
     ],

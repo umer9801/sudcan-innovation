@@ -12,7 +12,7 @@ export const Route = createFileRoute("/blog/interior-painting-cost-kitchener-202
         content:
           "How much does interior painting cost in Kitchener-Waterloo 2026? Room-by-room pricing, cost factors, and tips to get the best value. Free quotes available.",
       },
-      { name: "keywords", content: "interior painting cost Kitchener, painting prices Waterloo 2026, room painting cost, professional painter rates Ontario" },
+      { name: "keywords", content: "interior painting cost Kitchener, painting prices Waterloo 2026, room painting cost, professional painter rates Ontario, affordable painting services, interior painting estimate, cost per room, budget painting Kitchener" },
       
       // Open Graph
       { property: "og:title", content: "Interior Painting Cost Kitchener 2026 Guide" },

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/services/cabinet-refinishing")({
         content:
           "Professional cabinet refinishing in Kitchener-Waterloo. Spray-painted cabinets at 1/3 the cost of replacement. Factory-smooth finish. Free quotes. (226) 600-6637.",
       },
-      { name: "keywords", content: "cabinet refinishing Kitchener, kitchen cabinet painting, cabinet spray painting, bathroom vanity painting, cabinet makeover Waterloo" },
+      { name: "keywords", content: "cabinet refinishing Kitchener, kitchen cabinet painting, cabinet spray painting, bathroom vanity painting, cabinet makeover Waterloo, affordable cabinet update, professional cabinet refinishing Ontario" },
       { property: "og:title", content: "Cabinet Refinishing Kitchener | Sudcan Painting" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/cabinet-refinishing" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/cabinet-refinishing" },

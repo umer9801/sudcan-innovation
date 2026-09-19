@@ -14,7 +14,7 @@ export const Route = createFileRoute("/services/interior-painting")({
         content:
           "Professional interior painting in Kitchener-Waterloo. Expert prep, premium Benjamin Moore paint, flawless finish. 18+ years experience. Free quotes. 2-year warranty. Call (226) 600-6637.",
       },
-      { name: "keywords", content: "interior painting Kitchener, house painters Waterloo, room painting, wall painting, ceiling painting, residential painting, home painters near me" },
+      { name: "keywords", content: "interior painting Kitchener, house painters Waterloo, room painting, wall painting, ceiling painting, residential painting, home painters near me, affordable interior painting, professional painters Ontario, trim painting" },
       
       // Open Graph
       { property: "og:title", content: "Interior Painting Services Kitchener | Sudcan Painting" },
