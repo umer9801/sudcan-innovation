@@ -98,6 +98,17 @@ function QuotePage() {
           projectDescription: fd.get("projectDescription") as string,
         },
       });
+      
+      // Track conversion in GA4
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'generate_lead', {
+          event_category: 'conversion',
+          event_label: 'quote_form_submission',
+          currency: 'CAD',
+          value: 1,
+        });
+      }
+      
       toast.success("Quote request submitted — we'll reach out within one business day.");
       form.reset();
     } catch (err) {

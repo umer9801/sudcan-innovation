@@ -48,6 +48,65 @@ export const Route = createFileRoute("/services")({
       // Canonical
       { rel: "canonical", href: "https://www.sudcanpainting.com/services" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does interior painting take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A single room typically takes 1-2 days including prep and two coats. A full home interior usually runs 3-7 days depending on size and surface condition."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What paint brands do you use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We work exclusively with Benjamin Moore, Sherwin-Williams, and other premium brands. We never cut corners with budget paint — the difference in finish and durability is significant."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to move my furniture?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We handle all furniture moving and protection with professional drop cloths and plastic sheeting. You don't need to do a thing before we arrive."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you help choose colours?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We offer colour consultation as part of every project. We bring samples, assess your lighting, and help you choose shades that work beautifully in your space."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are your quotes fixed or estimates?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "All quotes are fixed once scope is confirmed. Any change order is approved in writing before we proceed — no surprise bills, ever."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What warranty do you offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "All workmanship is warrantied for 2 years. If paint peels, bubbles, or fails due to application, we come back and fix it at no charge."
+              }
+            }
+          ]
+        })
+      }
+    ],
   }),
   component: ServicesPage,
 });

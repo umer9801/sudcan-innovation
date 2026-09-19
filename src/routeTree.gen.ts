@@ -11,10 +11,29 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as QuoteRouteImport } from './routes/quote'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as ServicesVinylFlooringRouteImport } from './routes/services/vinyl-flooring'
+import { Route as ServicesTileInstallationRouteImport } from './routes/services/tile-installation'
+import { Route as ServicesKitchenRemodelingRouteImport } from './routes/services/kitchen-remodeling'
+import { Route as ServicesInteriorPaintingRouteImport } from './routes/services/interior-painting'
+import { Route as ServicesHomeRenovationRouteImport } from './routes/services/home-renovation'
+import { Route as ServicesHardwoodFlooringRouteImport } from './routes/services/hardwood-flooring'
+import { Route as ServicesExteriorPaintingRouteImport } from './routes/services/exterior-painting'
+import { Route as ServicesCabinetRefinishingRouteImport } from './routes/services/cabinet-refinishing'
+import { Route as ServicesBathroomRenovationRouteImport } from './routes/services/bathroom-renovation'
+import { Route as LocationsWaterlooRouteImport } from './routes/locations/waterloo'
+import { Route as LocationsKitchenerRouteImport } from './routes/locations/kitchener'
+import { Route as LocationsGuelphRouteImport } from './routes/locations/guelph'
+import { Route as LocationsCambridgeRouteImport } from './routes/locations/cambridge'
+import { Route as BlogInteriorPaintingCostKitchener2026RouteImport } from './routes/blog/interior-painting-cost-kitchener-2026'
+import { Route as BlogHowToChoosePaintColorsRouteImport } from './routes/blog/how-to-choose-paint-colors'
+import { Route as BlogCabinetRefinishingVsReplaceRouteImport } from './routes/blog/cabinet-refinishing-vs-replace'
+import { Route as BlogBestExteriorPaintCanadianWeatherRouteImport } from './routes/blog/best-exterior-paint-canadian-weather'
 import { Route as AdminQuotesRouteImport } from './routes/admin/quotes'
 import { Route as AdminLoginRouteImport } from './routes/admin/login'
 import { Route as AdminContactsRouteImport } from './routes/admin/contacts'
@@ -29,9 +48,19 @@ const QuoteRoute = QuoteRouteImport.update({
   path: '/quote',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -49,6 +78,102 @@ const AdminIndexRoute = AdminIndexRouteImport.update({
   path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesVinylFlooringRoute = ServicesVinylFlooringRouteImport.update({
+  id: '/vinyl-flooring',
+  path: '/vinyl-flooring',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesTileInstallationRoute =
+  ServicesTileInstallationRouteImport.update({
+    id: '/tile-installation',
+    path: '/tile-installation',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesKitchenRemodelingRoute =
+  ServicesKitchenRemodelingRouteImport.update({
+    id: '/kitchen-remodeling',
+    path: '/kitchen-remodeling',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesInteriorPaintingRoute =
+  ServicesInteriorPaintingRouteImport.update({
+    id: '/interior-painting',
+    path: '/interior-painting',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesHomeRenovationRoute = ServicesHomeRenovationRouteImport.update({
+  id: '/home-renovation',
+  path: '/home-renovation',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesHardwoodFlooringRoute =
+  ServicesHardwoodFlooringRouteImport.update({
+    id: '/hardwood-flooring',
+    path: '/hardwood-flooring',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesExteriorPaintingRoute =
+  ServicesExteriorPaintingRouteImport.update({
+    id: '/exterior-painting',
+    path: '/exterior-painting',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesCabinetRefinishingRoute =
+  ServicesCabinetRefinishingRouteImport.update({
+    id: '/cabinet-refinishing',
+    path: '/cabinet-refinishing',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesBathroomRenovationRoute =
+  ServicesBathroomRenovationRouteImport.update({
+    id: '/bathroom-renovation',
+    path: '/bathroom-renovation',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const LocationsWaterlooRoute = LocationsWaterlooRouteImport.update({
+  id: '/locations/waterloo',
+  path: '/locations/waterloo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsKitchenerRoute = LocationsKitchenerRouteImport.update({
+  id: '/locations/kitchener',
+  path: '/locations/kitchener',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsGuelphRoute = LocationsGuelphRouteImport.update({
+  id: '/locations/guelph',
+  path: '/locations/guelph',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsCambridgeRoute = LocationsCambridgeRouteImport.update({
+  id: '/locations/cambridge',
+  path: '/locations/cambridge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogInteriorPaintingCostKitchener2026Route =
+  BlogInteriorPaintingCostKitchener2026RouteImport.update({
+    id: '/interior-painting-cost-kitchener-2026',
+    path: '/interior-painting-cost-kitchener-2026',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogHowToChoosePaintColorsRoute =
+  BlogHowToChoosePaintColorsRouteImport.update({
+    id: '/how-to-choose-paint-colors',
+    path: '/how-to-choose-paint-colors',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogCabinetRefinishingVsReplaceRoute =
+  BlogCabinetRefinishingVsReplaceRouteImport.update({
+    id: '/cabinet-refinishing-vs-replace',
+    path: '/cabinet-refinishing-vs-replace',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogBestExteriorPaintCanadianWeatherRoute =
+  BlogBestExteriorPaintCanadianWeatherRouteImport.update({
+    id: '/best-exterior-paint-canadian-weather',
+    path: '/best-exterior-paint-canadian-weather',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const AdminQuotesRoute = AdminQuotesRouteImport.update({
   id: '/admin/quotes',
   path: '/admin/quotes',
@@ -68,35 +193,92 @@ const AdminContactsRoute = AdminContactsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
   '/quote': typeof QuoteRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/admin/contacts': typeof AdminContactsRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/quotes': typeof AdminQuotesRoute
+  '/blog/best-exterior-paint-canadian-weather': typeof BlogBestExteriorPaintCanadianWeatherRoute
+  '/blog/cabinet-refinishing-vs-replace': typeof BlogCabinetRefinishingVsReplaceRoute
+  '/blog/how-to-choose-paint-colors': typeof BlogHowToChoosePaintColorsRoute
+  '/blog/interior-painting-cost-kitchener-2026': typeof BlogInteriorPaintingCostKitchener2026Route
+  '/locations/cambridge': typeof LocationsCambridgeRoute
+  '/locations/guelph': typeof LocationsGuelphRoute
+  '/locations/kitchener': typeof LocationsKitchenerRoute
+  '/locations/waterloo': typeof LocationsWaterlooRoute
+  '/services/bathroom-renovation': typeof ServicesBathroomRenovationRoute
+  '/services/cabinet-refinishing': typeof ServicesCabinetRefinishingRoute
+  '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
+  '/services/hardwood-flooring': typeof ServicesHardwoodFlooringRoute
+  '/services/home-renovation': typeof ServicesHomeRenovationRoute
+  '/services/interior-painting': typeof ServicesInteriorPaintingRoute
+  '/services/kitchen-remodeling': typeof ServicesKitchenRemodelingRoute
+  '/services/tile-installation': typeof ServicesTileInstallationRoute
+  '/services/vinyl-flooring': typeof ServicesVinylFlooringRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
   '/quote': typeof QuoteRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/admin/contacts': typeof AdminContactsRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/quotes': typeof AdminQuotesRoute
+  '/blog/best-exterior-paint-canadian-weather': typeof BlogBestExteriorPaintCanadianWeatherRoute
+  '/blog/cabinet-refinishing-vs-replace': typeof BlogCabinetRefinishingVsReplaceRoute
+  '/blog/how-to-choose-paint-colors': typeof BlogHowToChoosePaintColorsRoute
+  '/blog/interior-painting-cost-kitchener-2026': typeof BlogInteriorPaintingCostKitchener2026Route
+  '/locations/cambridge': typeof LocationsCambridgeRoute
+  '/locations/guelph': typeof LocationsGuelphRoute
+  '/locations/kitchener': typeof LocationsKitchenerRoute
+  '/locations/waterloo': typeof LocationsWaterlooRoute
+  '/services/bathroom-renovation': typeof ServicesBathroomRenovationRoute
+  '/services/cabinet-refinishing': typeof ServicesCabinetRefinishingRoute
+  '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
+  '/services/hardwood-flooring': typeof ServicesHardwoodFlooringRoute
+  '/services/home-renovation': typeof ServicesHomeRenovationRoute
+  '/services/interior-painting': typeof ServicesInteriorPaintingRoute
+  '/services/kitchen-remodeling': typeof ServicesKitchenRemodelingRoute
+  '/services/tile-installation': typeof ServicesTileInstallationRoute
+  '/services/vinyl-flooring': typeof ServicesVinylFlooringRoute
   '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
   '/quote': typeof QuoteRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/admin/contacts': typeof AdminContactsRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/quotes': typeof AdminQuotesRoute
+  '/blog/best-exterior-paint-canadian-weather': typeof BlogBestExteriorPaintCanadianWeatherRoute
+  '/blog/cabinet-refinishing-vs-replace': typeof BlogCabinetRefinishingVsReplaceRoute
+  '/blog/how-to-choose-paint-colors': typeof BlogHowToChoosePaintColorsRoute
+  '/blog/interior-painting-cost-kitchener-2026': typeof BlogInteriorPaintingCostKitchener2026Route
+  '/locations/cambridge': typeof LocationsCambridgeRoute
+  '/locations/guelph': typeof LocationsGuelphRoute
+  '/locations/kitchener': typeof LocationsKitchenerRoute
+  '/locations/waterloo': typeof LocationsWaterlooRoute
+  '/services/bathroom-renovation': typeof ServicesBathroomRenovationRoute
+  '/services/cabinet-refinishing': typeof ServicesCabinetRefinishingRoute
+  '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
+  '/services/hardwood-flooring': typeof ServicesHardwoodFlooringRoute
+  '/services/home-renovation': typeof ServicesHomeRenovationRoute
+  '/services/interior-painting': typeof ServicesInteriorPaintingRoute
+  '/services/kitchen-remodeling': typeof ServicesKitchenRemodelingRoute
+  '/services/tile-installation': typeof ServicesTileInstallationRoute
+  '/services/vinyl-flooring': typeof ServicesVinylFlooringRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
@@ -104,46 +286,109 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/blog'
     | '/contact'
+    | '/portfolio'
     | '/quote'
     | '/services'
     | '/admin/contacts'
     | '/admin/login'
     | '/admin/quotes'
+    | '/blog/best-exterior-paint-canadian-weather'
+    | '/blog/cabinet-refinishing-vs-replace'
+    | '/blog/how-to-choose-paint-colors'
+    | '/blog/interior-painting-cost-kitchener-2026'
+    | '/locations/cambridge'
+    | '/locations/guelph'
+    | '/locations/kitchener'
+    | '/locations/waterloo'
+    | '/services/bathroom-renovation'
+    | '/services/cabinet-refinishing'
+    | '/services/exterior-painting'
+    | '/services/hardwood-flooring'
+    | '/services/home-renovation'
+    | '/services/interior-painting'
+    | '/services/kitchen-remodeling'
+    | '/services/tile-installation'
+    | '/services/vinyl-flooring'
     | '/admin/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/blog'
     | '/contact'
+    | '/portfolio'
     | '/quote'
     | '/services'
     | '/admin/contacts'
     | '/admin/login'
     | '/admin/quotes'
+    | '/blog/best-exterior-paint-canadian-weather'
+    | '/blog/cabinet-refinishing-vs-replace'
+    | '/blog/how-to-choose-paint-colors'
+    | '/blog/interior-painting-cost-kitchener-2026'
+    | '/locations/cambridge'
+    | '/locations/guelph'
+    | '/locations/kitchener'
+    | '/locations/waterloo'
+    | '/services/bathroom-renovation'
+    | '/services/cabinet-refinishing'
+    | '/services/exterior-painting'
+    | '/services/hardwood-flooring'
+    | '/services/home-renovation'
+    | '/services/interior-painting'
+    | '/services/kitchen-remodeling'
+    | '/services/tile-installation'
+    | '/services/vinyl-flooring'
     | '/admin'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/blog'
     | '/contact'
+    | '/portfolio'
     | '/quote'
     | '/services'
     | '/admin/contacts'
     | '/admin/login'
     | '/admin/quotes'
+    | '/blog/best-exterior-paint-canadian-weather'
+    | '/blog/cabinet-refinishing-vs-replace'
+    | '/blog/how-to-choose-paint-colors'
+    | '/blog/interior-painting-cost-kitchener-2026'
+    | '/locations/cambridge'
+    | '/locations/guelph'
+    | '/locations/kitchener'
+    | '/locations/waterloo'
+    | '/services/bathroom-renovation'
+    | '/services/cabinet-refinishing'
+    | '/services/exterior-painting'
+    | '/services/hardwood-flooring'
+    | '/services/home-renovation'
+    | '/services/interior-painting'
+    | '/services/kitchen-remodeling'
+    | '/services/tile-installation'
+    | '/services/vinyl-flooring'
     | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
+  PortfolioRoute: typeof PortfolioRoute
   QuoteRoute: typeof QuoteRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
   AdminContactsRoute: typeof AdminContactsRoute
   AdminLoginRoute: typeof AdminLoginRoute
   AdminQuotesRoute: typeof AdminQuotesRoute
+  LocationsCambridgeRoute: typeof LocationsCambridgeRoute
+  LocationsGuelphRoute: typeof LocationsGuelphRoute
+  LocationsKitchenerRoute: typeof LocationsKitchenerRoute
+  LocationsWaterlooRoute: typeof LocationsWaterlooRoute
   AdminIndexRoute: typeof AdminIndexRoute
 }
 
@@ -163,11 +408,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuoteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -190,6 +449,125 @@ declare module '@tanstack/react-router' {
       fullPath: '/admin/'
       preLoaderRoute: typeof AdminIndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/services/vinyl-flooring': {
+      id: '/services/vinyl-flooring'
+      path: '/vinyl-flooring'
+      fullPath: '/services/vinyl-flooring'
+      preLoaderRoute: typeof ServicesVinylFlooringRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/tile-installation': {
+      id: '/services/tile-installation'
+      path: '/tile-installation'
+      fullPath: '/services/tile-installation'
+      preLoaderRoute: typeof ServicesTileInstallationRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/kitchen-remodeling': {
+      id: '/services/kitchen-remodeling'
+      path: '/kitchen-remodeling'
+      fullPath: '/services/kitchen-remodeling'
+      preLoaderRoute: typeof ServicesKitchenRemodelingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/interior-painting': {
+      id: '/services/interior-painting'
+      path: '/interior-painting'
+      fullPath: '/services/interior-painting'
+      preLoaderRoute: typeof ServicesInteriorPaintingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/home-renovation': {
+      id: '/services/home-renovation'
+      path: '/home-renovation'
+      fullPath: '/services/home-renovation'
+      preLoaderRoute: typeof ServicesHomeRenovationRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/hardwood-flooring': {
+      id: '/services/hardwood-flooring'
+      path: '/hardwood-flooring'
+      fullPath: '/services/hardwood-flooring'
+      preLoaderRoute: typeof ServicesHardwoodFlooringRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/exterior-painting': {
+      id: '/services/exterior-painting'
+      path: '/exterior-painting'
+      fullPath: '/services/exterior-painting'
+      preLoaderRoute: typeof ServicesExteriorPaintingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/cabinet-refinishing': {
+      id: '/services/cabinet-refinishing'
+      path: '/cabinet-refinishing'
+      fullPath: '/services/cabinet-refinishing'
+      preLoaderRoute: typeof ServicesCabinetRefinishingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/bathroom-renovation': {
+      id: '/services/bathroom-renovation'
+      path: '/bathroom-renovation'
+      fullPath: '/services/bathroom-renovation'
+      preLoaderRoute: typeof ServicesBathroomRenovationRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/locations/waterloo': {
+      id: '/locations/waterloo'
+      path: '/locations/waterloo'
+      fullPath: '/locations/waterloo'
+      preLoaderRoute: typeof LocationsWaterlooRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/kitchener': {
+      id: '/locations/kitchener'
+      path: '/locations/kitchener'
+      fullPath: '/locations/kitchener'
+      preLoaderRoute: typeof LocationsKitchenerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/guelph': {
+      id: '/locations/guelph'
+      path: '/locations/guelph'
+      fullPath: '/locations/guelph'
+      preLoaderRoute: typeof LocationsGuelphRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/cambridge': {
+      id: '/locations/cambridge'
+      path: '/locations/cambridge'
+      fullPath: '/locations/cambridge'
+      preLoaderRoute: typeof LocationsCambridgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/interior-painting-cost-kitchener-2026': {
+      id: '/blog/interior-painting-cost-kitchener-2026'
+      path: '/interior-painting-cost-kitchener-2026'
+      fullPath: '/blog/interior-painting-cost-kitchener-2026'
+      preLoaderRoute: typeof BlogInteriorPaintingCostKitchener2026RouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/how-to-choose-paint-colors': {
+      id: '/blog/how-to-choose-paint-colors'
+      path: '/how-to-choose-paint-colors'
+      fullPath: '/blog/how-to-choose-paint-colors'
+      preLoaderRoute: typeof BlogHowToChoosePaintColorsRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/cabinet-refinishing-vs-replace': {
+      id: '/blog/cabinet-refinishing-vs-replace'
+      path: '/cabinet-refinishing-vs-replace'
+      fullPath: '/blog/cabinet-refinishing-vs-replace'
+      preLoaderRoute: typeof BlogCabinetRefinishingVsReplaceRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/best-exterior-paint-canadian-weather': {
+      id: '/blog/best-exterior-paint-canadian-weather'
+      path: '/best-exterior-paint-canadian-weather'
+      fullPath: '/blog/best-exterior-paint-canadian-weather'
+      preLoaderRoute: typeof BlogBestExteriorPaintCanadianWeatherRouteImport
+      parentRoute: typeof BlogRoute
     }
     '/admin/quotes': {
       id: '/admin/quotes'
@@ -215,15 +593,67 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface BlogRouteChildren {
+  BlogBestExteriorPaintCanadianWeatherRoute: typeof BlogBestExteriorPaintCanadianWeatherRoute
+  BlogCabinetRefinishingVsReplaceRoute: typeof BlogCabinetRefinishingVsReplaceRoute
+  BlogHowToChoosePaintColorsRoute: typeof BlogHowToChoosePaintColorsRoute
+  BlogInteriorPaintingCostKitchener2026Route: typeof BlogInteriorPaintingCostKitchener2026Route
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogBestExteriorPaintCanadianWeatherRoute:
+    BlogBestExteriorPaintCanadianWeatherRoute,
+  BlogCabinetRefinishingVsReplaceRoute: BlogCabinetRefinishingVsReplaceRoute,
+  BlogHowToChoosePaintColorsRoute: BlogHowToChoosePaintColorsRoute,
+  BlogInteriorPaintingCostKitchener2026Route:
+    BlogInteriorPaintingCostKitchener2026Route,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface ServicesRouteChildren {
+  ServicesBathroomRenovationRoute: typeof ServicesBathroomRenovationRoute
+  ServicesCabinetRefinishingRoute: typeof ServicesCabinetRefinishingRoute
+  ServicesExteriorPaintingRoute: typeof ServicesExteriorPaintingRoute
+  ServicesHardwoodFlooringRoute: typeof ServicesHardwoodFlooringRoute
+  ServicesHomeRenovationRoute: typeof ServicesHomeRenovationRoute
+  ServicesInteriorPaintingRoute: typeof ServicesInteriorPaintingRoute
+  ServicesKitchenRemodelingRoute: typeof ServicesKitchenRemodelingRoute
+  ServicesTileInstallationRoute: typeof ServicesTileInstallationRoute
+  ServicesVinylFlooringRoute: typeof ServicesVinylFlooringRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesBathroomRenovationRoute: ServicesBathroomRenovationRoute,
+  ServicesCabinetRefinishingRoute: ServicesCabinetRefinishingRoute,
+  ServicesExteriorPaintingRoute: ServicesExteriorPaintingRoute,
+  ServicesHardwoodFlooringRoute: ServicesHardwoodFlooringRoute,
+  ServicesHomeRenovationRoute: ServicesHomeRenovationRoute,
+  ServicesInteriorPaintingRoute: ServicesInteriorPaintingRoute,
+  ServicesKitchenRemodelingRoute: ServicesKitchenRemodelingRoute,
+  ServicesTileInstallationRoute: ServicesTileInstallationRoute,
+  ServicesVinylFlooringRoute: ServicesVinylFlooringRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
+  PortfolioRoute: PortfolioRoute,
   QuoteRoute: QuoteRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
   AdminContactsRoute: AdminContactsRoute,
   AdminLoginRoute: AdminLoginRoute,
   AdminQuotesRoute: AdminQuotesRoute,
+  LocationsCambridgeRoute: LocationsCambridgeRoute,
+  LocationsGuelphRoute: LocationsGuelphRoute,
+  LocationsKitchenerRoute: LocationsKitchenerRoute,
+  LocationsWaterlooRoute: LocationsWaterlooRoute,
   AdminIndexRoute: AdminIndexRoute,
 }
 export const routeTree = rootRouteImport

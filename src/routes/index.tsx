@@ -297,6 +297,78 @@ function HomePage() {
         />
       </section>
 
+      {/* ── TRUST SIGNALS — Warm Cream bg · Certifications · Warranty · Reviews ── */}
+      <section style={{ background: "#F5F0E6" }}>
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <Reveal>
+            <div
+              className="grid gap-8 p-8 md:grid-cols-3 md:p-10"
+              style={{
+                borderRadius: "1.5rem",
+                background: "#EDEADE",
+                boxShadow:
+                  "0 4px 0 0 rgba(32,35,33,0.09), 0 14px 36px -8px rgba(32,35,33,0.14), inset 0 1px 0 rgba(255,255,255,0.68)",
+                border: "1px solid rgba(198,161,91,0.22)",
+              }}
+            >
+              <div className="flex flex-col items-center text-center">
+                <div
+                  className="grid h-16 w-16 place-items-center"
+                  style={{
+                    borderRadius: "1rem",
+                    background: "linear-gradient(135deg, #35483A 0%, #202321 100%)",
+                    boxShadow:
+                      "0 3px 0 0 rgba(32,35,33,0.45), 0 8px 20px -4px rgba(32,35,33,0.30), inset 0 1px 0 rgba(255,255,255,0.11)",
+                  }}
+                >
+                  <ShieldCheck size={28} className="text-[#C6A15B]" />
+                </div>
+                <h3 className="mt-4 font-display text-lg text-[#202321]">Licensed & Insured</h3>
+                <p className="mt-2 text-sm text-[#687967]">
+                  Fully licensed, bonded, and insured for your peace of mind.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div
+                  className="grid h-16 w-16 place-items-center"
+                  style={{
+                    borderRadius: "1rem",
+                    background: "linear-gradient(135deg, #B52E32 0%, #8f2125 100%)",
+                    boxShadow:
+                      "0 3px 0 0 rgba(130,20,23,0.70), 0 8px 20px -4px rgba(130,20,23,0.38), inset 0 1px 0 rgba(255,255,255,0.30)",
+                  }}
+                >
+                  <Award size={28} className="text-white" />
+                </div>
+                <h3 className="mt-4 font-display text-lg text-[#202321]">2-Year Warranty</h3>
+                <p className="mt-2 text-sm text-[#687967]">
+                  All workmanship backed by our 2-year warranty guarantee.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div
+                  className="grid h-16 w-16 place-items-center"
+                  style={{
+                    borderRadius: "1rem",
+                    background: "linear-gradient(135deg, #C6A15B 0%, #a8843e 100%)",
+                    boxShadow:
+                      "0 3px 0 0 rgba(160,120,45,0.70), 0 8px 20px -4px rgba(160,120,45,0.38), inset 0 1px 0 rgba(255,255,255,0.32)",
+                  }}
+                >
+                  <Sparkles size={28} className="text-[#202321]" />
+                </div>
+                <h3 className="mt-4 font-display text-lg text-[#202321]">5★ Rated</h3>
+                <p className="mt-2 text-sm text-[#687967]">
+                  Average 4.9/5 rating across 150+ verified customer reviews.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── PAINTING HIGHLIGHTS — Warm Cream bg · Olive headings · Red labels · Brass icons ── */}
       <section style={{ background: "#F5F0E6" }}>
         <div className="mx-auto max-w-7xl px-6 py-28">
