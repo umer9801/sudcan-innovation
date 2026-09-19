@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tantml:router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, Bath } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
