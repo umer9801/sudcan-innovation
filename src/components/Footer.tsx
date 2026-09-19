@@ -92,18 +92,38 @@ export function Footer() {
               className="mt-2 mb-4 h-px w-8"
               style={{ background: "linear-gradient(90deg, #C6A15B, transparent)" }}
             />
-            <ul className="space-y-3 text-sm text-[#F5F0E6]/70">
+            <ul className="space-y-2 text-sm text-[#687967]">
               <li className="flex items-start gap-2">
                 <MapPin size={14} className="mt-1 flex-shrink-0 text-[#C6A15B]" />
                 286 Driftwood Dr. Kitchener, ON N2N-1X6
               </li>
               <li className="flex items-start gap-2">
                 <Phone size={14} className="mt-1 flex-shrink-0 text-[#C6A15B]" />
-                (226) 600-6637
+                <a 
+                  href="tel:+12266006637" 
+                  className="hover:text-[#C6A15B] transition-colors hover:underline"
+                  onClick={() => {
+                    // Track phone click in GA4
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'phone_call_click', {
+                        event_category: 'engagement',
+                        event_label: 'footer_phone_link',
+                        value: 1
+                      });
+                    }
+                  }}
+                >
+                  (226) 600-6637
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={14} className="mt-1 flex-shrink-0 text-[#C6A15B]" />
-                sudcaninfo@gmail.com
+                <a 
+                  href="mailto:sudcaninfo@gmail.com"
+                  className="hover:text-[#C6A15B] transition-colors hover:underline"
+                >
+                  sudcaninfo@gmail.com
+                </a>
               </li>
             </ul>
           </div>
