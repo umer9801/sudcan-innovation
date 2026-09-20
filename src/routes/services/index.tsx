@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 import {
   ArrowRight,
   Bath,
@@ -21,7 +21,7 @@ import { Reveal } from "@/components/Reveal";
 import beforeImg from "@/assets/12.jpeg";
 import afterImg from "@/assets/10.jpeg";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Painting & Renovation Services | Interior, Exterior, Flooring | Kitchener ON - Sudcan Painting" },

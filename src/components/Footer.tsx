@@ -64,10 +64,12 @@ export function Footer() {
             />
             <ul className="space-y-2 text-sm text-[#687967]">
               {[
-                { to: "/",        label: "Home" },
-                { to: "/about",   label: "About" },
-                { to: "/services",label: "Services" },
-                { to: "/contact", label: "Contact" },
+                { to: "/",         label: "Home" },
+                { to: "/about",    label: "About" },
+                { to: "/services", label: "Services" },
+                { to: "/portfolio",label: "Portfolio" },
+                { to: "/blog",     label: "Blog" },
+                { to: "/contact",  label: "Contact" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link

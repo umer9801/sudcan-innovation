@@ -9,13 +9,13 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ServicesRouteImport } from './routes/services'
 import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as ServicesVinylFlooringRouteImport } from './routes/services/vinyl-flooring'
 import { Route as ServicesTileInstallationRouteImport } from './routes/services/tile-installation'
@@ -38,11 +38,6 @@ import { Route as AdminQuotesRouteImport } from './routes/admin/quotes'
 import { Route as AdminLoginRouteImport } from './routes/admin/login'
 import { Route as AdminContactsRouteImport } from './routes/admin/contacts'
 
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const QuoteRoute = QuoteRouteImport.update({
   id: '/quote',
   path: '/quote',
@@ -58,11 +53,6 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -73,62 +63,72 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
   id: '/admin/',
   path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesVinylFlooringRoute = ServicesVinylFlooringRouteImport.update({
-  id: '/vinyl-flooring',
-  path: '/vinyl-flooring',
-  getParentRoute: () => ServicesRoute,
+  id: '/services/vinyl-flooring',
+  path: '/services/vinyl-flooring',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesTileInstallationRoute =
   ServicesTileInstallationRouteImport.update({
-    id: '/tile-installation',
-    path: '/tile-installation',
-    getParentRoute: () => ServicesRoute,
+    id: '/services/tile-installation',
+    path: '/services/tile-installation',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesKitchenRemodelingRoute =
   ServicesKitchenRemodelingRouteImport.update({
-    id: '/kitchen-remodeling',
-    path: '/kitchen-remodeling',
-    getParentRoute: () => ServicesRoute,
+    id: '/services/kitchen-remodeling',
+    path: '/services/kitchen-remodeling',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesInteriorPaintingRoute =
   ServicesInteriorPaintingRouteImport.update({
-    id: '/interior-painting',
-    path: '/interior-painting',
-    getParentRoute: () => ServicesRoute,
+    id: '/services/interior-painting',
+    path: '/services/interior-painting',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesHomeRenovationRoute = ServicesHomeRenovationRouteImport.update({
-  id: '/home-renovation',
-  path: '/home-renovation',
-  getParentRoute: () => ServicesRoute,
+  id: '/services/home-renovation',
+  path: '/services/home-renovation',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesHardwoodFlooringRoute =
   ServicesHardwoodFlooringRouteImport.update({
-    id: '/hardwood-flooring',
-    path: '/hardwood-flooring',
-    getParentRoute: () => ServicesRoute,
+    id: '/services/hardwood-flooring',
+    path: '/services/hardwood-flooring',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesExteriorPaintingRoute =
   ServicesExteriorPaintingRouteImport.update({
-    id: '/exterior-painting',
-    path: '/exterior-painting',
-    getParentRoute: () => ServicesRoute,
+    id: '/services/exterior-painting',
+    path: '/services/exterior-painting',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesCabinetRefinishingRoute =
   ServicesCabinetRefinishingRouteImport.update({
-    id: '/cabinet-refinishing',
-    path: '/cabinet-refinishing',
-    getParentRoute: () => ServicesRoute,
+    id: '/services/cabinet-refinishing',
+    path: '/services/cabinet-refinishing',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesBathroomRenovationRoute =
   ServicesBathroomRenovationRouteImport.update({
-    id: '/bathroom-renovation',
-    path: '/bathroom-renovation',
-    getParentRoute: () => ServicesRoute,
+    id: '/services/bathroom-renovation',
+    path: '/services/bathroom-renovation',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const LocationsWaterlooRoute = LocationsWaterlooRouteImport.update({
   id: '/locations/waterloo',
@@ -152,27 +152,27 @@ const LocationsCambridgeRoute = LocationsCambridgeRouteImport.update({
 } as any)
 const BlogInteriorPaintingCostKitchener2026Route =
   BlogInteriorPaintingCostKitchener2026RouteImport.update({
-    id: '/interior-painting-cost-kitchener-2026',
-    path: '/interior-painting-cost-kitchener-2026',
-    getParentRoute: () => BlogRoute,
+    id: '/blog/interior-painting-cost-kitchener-2026',
+    path: '/blog/interior-painting-cost-kitchener-2026',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const BlogHowToChoosePaintColorsRoute =
   BlogHowToChoosePaintColorsRouteImport.update({
-    id: '/how-to-choose-paint-colors',
-    path: '/how-to-choose-paint-colors',
-    getParentRoute: () => BlogRoute,
+    id: '/blog/how-to-choose-paint-colors',
+    path: '/blog/how-to-choose-paint-colors',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const BlogCabinetRefinishingVsReplaceRoute =
   BlogCabinetRefinishingVsReplaceRouteImport.update({
-    id: '/cabinet-refinishing-vs-replace',
-    path: '/cabinet-refinishing-vs-replace',
-    getParentRoute: () => BlogRoute,
+    id: '/blog/cabinet-refinishing-vs-replace',
+    path: '/blog/cabinet-refinishing-vs-replace',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const BlogBestExteriorPaintCanadianWeatherRoute =
   BlogBestExteriorPaintCanadianWeatherRouteImport.update({
-    id: '/best-exterior-paint-canadian-weather',
-    path: '/best-exterior-paint-canadian-weather',
-    getParentRoute: () => BlogRoute,
+    id: '/blog/best-exterior-paint-canadian-weather',
+    path: '/blog/best-exterior-paint-canadian-weather',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const AdminQuotesRoute = AdminQuotesRouteImport.update({
   id: '/admin/quotes',
@@ -193,11 +193,9 @@ const AdminContactsRoute = AdminContactsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/quote': typeof QuoteRoute
-  '/services': typeof ServicesRouteWithChildren
   '/admin/contacts': typeof AdminContactsRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/quotes': typeof AdminQuotesRoute
@@ -219,15 +217,15 @@ export interface FileRoutesByFullPath {
   '/services/tile-installation': typeof ServicesTileInstallationRoute
   '/services/vinyl-flooring': typeof ServicesVinylFlooringRoute
   '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/quote': typeof QuoteRoute
-  '/services': typeof ServicesRouteWithChildren
   '/admin/contacts': typeof AdminContactsRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/quotes': typeof AdminQuotesRoute
@@ -249,16 +247,16 @@ export interface FileRoutesByTo {
   '/services/tile-installation': typeof ServicesTileInstallationRoute
   '/services/vinyl-flooring': typeof ServicesVinylFlooringRoute
   '/admin': typeof AdminIndexRoute
+  '/blog': typeof BlogIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/quote': typeof QuoteRoute
-  '/services': typeof ServicesRouteWithChildren
   '/admin/contacts': typeof AdminContactsRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/quotes': typeof AdminQuotesRoute
@@ -280,17 +278,17 @@ export interface FileRoutesById {
   '/services/tile-installation': typeof ServicesTileInstallationRoute
   '/services/vinyl-flooring': typeof ServicesVinylFlooringRoute
   '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/portfolio'
     | '/quote'
-    | '/services'
     | '/admin/contacts'
     | '/admin/login'
     | '/admin/quotes'
@@ -312,15 +310,15 @@ export interface FileRouteTypes {
     | '/services/tile-installation'
     | '/services/vinyl-flooring'
     | '/admin/'
+    | '/blog/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/portfolio'
     | '/quote'
-    | '/services'
     | '/admin/contacts'
     | '/admin/login'
     | '/admin/quotes'
@@ -342,15 +340,15 @@ export interface FileRouteTypes {
     | '/services/tile-installation'
     | '/services/vinyl-flooring'
     | '/admin'
+    | '/blog'
+    | '/services'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/portfolio'
     | '/quote'
-    | '/services'
     | '/admin/contacts'
     | '/admin/login'
     | '/admin/quotes'
@@ -372,35 +370,43 @@ export interface FileRouteTypes {
     | '/services/tile-installation'
     | '/services/vinyl-flooring'
     | '/admin/'
+    | '/blog/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   PortfolioRoute: typeof PortfolioRoute
   QuoteRoute: typeof QuoteRoute
-  ServicesRoute: typeof ServicesRouteWithChildren
   AdminContactsRoute: typeof AdminContactsRoute
   AdminLoginRoute: typeof AdminLoginRoute
   AdminQuotesRoute: typeof AdminQuotesRoute
+  BlogBestExteriorPaintCanadianWeatherRoute: typeof BlogBestExteriorPaintCanadianWeatherRoute
+  BlogCabinetRefinishingVsReplaceRoute: typeof BlogCabinetRefinishingVsReplaceRoute
+  BlogHowToChoosePaintColorsRoute: typeof BlogHowToChoosePaintColorsRoute
+  BlogInteriorPaintingCostKitchener2026Route: typeof BlogInteriorPaintingCostKitchener2026Route
   LocationsCambridgeRoute: typeof LocationsCambridgeRoute
   LocationsGuelphRoute: typeof LocationsGuelphRoute
   LocationsKitchenerRoute: typeof LocationsKitchenerRoute
   LocationsWaterlooRoute: typeof LocationsWaterlooRoute
+  ServicesBathroomRenovationRoute: typeof ServicesBathroomRenovationRoute
+  ServicesCabinetRefinishingRoute: typeof ServicesCabinetRefinishingRoute
+  ServicesExteriorPaintingRoute: typeof ServicesExteriorPaintingRoute
+  ServicesHardwoodFlooringRoute: typeof ServicesHardwoodFlooringRoute
+  ServicesHomeRenovationRoute: typeof ServicesHomeRenovationRoute
+  ServicesInteriorPaintingRoute: typeof ServicesInteriorPaintingRoute
+  ServicesKitchenRemodelingRoute: typeof ServicesKitchenRemodelingRoute
+  ServicesTileInstallationRoute: typeof ServicesTileInstallationRoute
+  ServicesVinylFlooringRoute: typeof ServicesVinylFlooringRoute
   AdminIndexRoute: typeof AdminIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/quote': {
       id: '/quote'
       path: '/quote'
@@ -422,13 +428,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -443,6 +442,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/': {
       id: '/admin/'
       path: '/admin'
@@ -452,66 +465,66 @@ declare module '@tanstack/react-router' {
     }
     '/services/vinyl-flooring': {
       id: '/services/vinyl-flooring'
-      path: '/vinyl-flooring'
+      path: '/services/vinyl-flooring'
       fullPath: '/services/vinyl-flooring'
       preLoaderRoute: typeof ServicesVinylFlooringRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/tile-installation': {
       id: '/services/tile-installation'
-      path: '/tile-installation'
+      path: '/services/tile-installation'
       fullPath: '/services/tile-installation'
       preLoaderRoute: typeof ServicesTileInstallationRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/kitchen-remodeling': {
       id: '/services/kitchen-remodeling'
-      path: '/kitchen-remodeling'
+      path: '/services/kitchen-remodeling'
       fullPath: '/services/kitchen-remodeling'
       preLoaderRoute: typeof ServicesKitchenRemodelingRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/interior-painting': {
       id: '/services/interior-painting'
-      path: '/interior-painting'
+      path: '/services/interior-painting'
       fullPath: '/services/interior-painting'
       preLoaderRoute: typeof ServicesInteriorPaintingRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/home-renovation': {
       id: '/services/home-renovation'
-      path: '/home-renovation'
+      path: '/services/home-renovation'
       fullPath: '/services/home-renovation'
       preLoaderRoute: typeof ServicesHomeRenovationRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/hardwood-flooring': {
       id: '/services/hardwood-flooring'
-      path: '/hardwood-flooring'
+      path: '/services/hardwood-flooring'
       fullPath: '/services/hardwood-flooring'
       preLoaderRoute: typeof ServicesHardwoodFlooringRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/exterior-painting': {
       id: '/services/exterior-painting'
-      path: '/exterior-painting'
+      path: '/services/exterior-painting'
       fullPath: '/services/exterior-painting'
       preLoaderRoute: typeof ServicesExteriorPaintingRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/cabinet-refinishing': {
       id: '/services/cabinet-refinishing'
-      path: '/cabinet-refinishing'
+      path: '/services/cabinet-refinishing'
       fullPath: '/services/cabinet-refinishing'
       preLoaderRoute: typeof ServicesCabinetRefinishingRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/bathroom-renovation': {
       id: '/services/bathroom-renovation'
-      path: '/bathroom-renovation'
+      path: '/services/bathroom-renovation'
       fullPath: '/services/bathroom-renovation'
       preLoaderRoute: typeof ServicesBathroomRenovationRouteImport
-      parentRoute: typeof ServicesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/locations/waterloo': {
       id: '/locations/waterloo'
@@ -543,31 +556,31 @@ declare module '@tanstack/react-router' {
     }
     '/blog/interior-painting-cost-kitchener-2026': {
       id: '/blog/interior-painting-cost-kitchener-2026'
-      path: '/interior-painting-cost-kitchener-2026'
+      path: '/blog/interior-painting-cost-kitchener-2026'
       fullPath: '/blog/interior-painting-cost-kitchener-2026'
       preLoaderRoute: typeof BlogInteriorPaintingCostKitchener2026RouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
     '/blog/how-to-choose-paint-colors': {
       id: '/blog/how-to-choose-paint-colors'
-      path: '/how-to-choose-paint-colors'
+      path: '/blog/how-to-choose-paint-colors'
       fullPath: '/blog/how-to-choose-paint-colors'
       preLoaderRoute: typeof BlogHowToChoosePaintColorsRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
     '/blog/cabinet-refinishing-vs-replace': {
       id: '/blog/cabinet-refinishing-vs-replace'
-      path: '/cabinet-refinishing-vs-replace'
+      path: '/blog/cabinet-refinishing-vs-replace'
       fullPath: '/blog/cabinet-refinishing-vs-replace'
       preLoaderRoute: typeof BlogCabinetRefinishingVsReplaceRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
     '/blog/best-exterior-paint-canadian-weather': {
       id: '/blog/best-exterior-paint-canadian-weather'
-      path: '/best-exterior-paint-canadian-weather'
+      path: '/blog/best-exterior-paint-canadian-weather'
       fullPath: '/blog/best-exterior-paint-canadian-weather'
       preLoaderRoute: typeof BlogBestExteriorPaintCanadianWeatherRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
     '/admin/quotes': {
       id: '/admin/quotes'
@@ -593,37 +606,25 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface BlogRouteChildren {
-  BlogBestExteriorPaintCanadianWeatherRoute: typeof BlogBestExteriorPaintCanadianWeatherRoute
-  BlogCabinetRefinishingVsReplaceRoute: typeof BlogCabinetRefinishingVsReplaceRoute
-  BlogHowToChoosePaintColorsRoute: typeof BlogHowToChoosePaintColorsRoute
-  BlogInteriorPaintingCostKitchener2026Route: typeof BlogInteriorPaintingCostKitchener2026Route
-}
-
-const BlogRouteChildren: BlogRouteChildren = {
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  PortfolioRoute: PortfolioRoute,
+  QuoteRoute: QuoteRoute,
+  AdminContactsRoute: AdminContactsRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminQuotesRoute: AdminQuotesRoute,
   BlogBestExteriorPaintCanadianWeatherRoute:
     BlogBestExteriorPaintCanadianWeatherRoute,
   BlogCabinetRefinishingVsReplaceRoute: BlogCabinetRefinishingVsReplaceRoute,
   BlogHowToChoosePaintColorsRoute: BlogHowToChoosePaintColorsRoute,
   BlogInteriorPaintingCostKitchener2026Route:
     BlogInteriorPaintingCostKitchener2026Route,
-}
-
-const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
-
-interface ServicesRouteChildren {
-  ServicesBathroomRenovationRoute: typeof ServicesBathroomRenovationRoute
-  ServicesCabinetRefinishingRoute: typeof ServicesCabinetRefinishingRoute
-  ServicesExteriorPaintingRoute: typeof ServicesExteriorPaintingRoute
-  ServicesHardwoodFlooringRoute: typeof ServicesHardwoodFlooringRoute
-  ServicesHomeRenovationRoute: typeof ServicesHomeRenovationRoute
-  ServicesInteriorPaintingRoute: typeof ServicesInteriorPaintingRoute
-  ServicesKitchenRemodelingRoute: typeof ServicesKitchenRemodelingRoute
-  ServicesTileInstallationRoute: typeof ServicesTileInstallationRoute
-  ServicesVinylFlooringRoute: typeof ServicesVinylFlooringRoute
-}
-
-const ServicesRouteChildren: ServicesRouteChildren = {
+  LocationsCambridgeRoute: LocationsCambridgeRoute,
+  LocationsGuelphRoute: LocationsGuelphRoute,
+  LocationsKitchenerRoute: LocationsKitchenerRoute,
+  LocationsWaterlooRoute: LocationsWaterlooRoute,
   ServicesBathroomRenovationRoute: ServicesBathroomRenovationRoute,
   ServicesCabinetRefinishingRoute: ServicesCabinetRefinishingRoute,
   ServicesExteriorPaintingRoute: ServicesExteriorPaintingRoute,
@@ -633,28 +634,9 @@ const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesKitchenRemodelingRoute: ServicesKitchenRemodelingRoute,
   ServicesTileInstallationRoute: ServicesTileInstallationRoute,
   ServicesVinylFlooringRoute: ServicesVinylFlooringRoute,
-}
-
-const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
-  ServicesRouteChildren,
-)
-
-const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  BlogRoute: BlogRouteWithChildren,
-  ContactRoute: ContactRoute,
-  PortfolioRoute: PortfolioRoute,
-  QuoteRoute: QuoteRoute,
-  ServicesRoute: ServicesRouteWithChildren,
-  AdminContactsRoute: AdminContactsRoute,
-  AdminLoginRoute: AdminLoginRoute,
-  AdminQuotesRoute: AdminQuotesRoute,
-  LocationsCambridgeRoute: LocationsCambridgeRoute,
-  LocationsGuelphRoute: LocationsGuelphRoute,
-  LocationsKitchenerRoute: LocationsKitchenerRoute,
-  LocationsWaterlooRoute: LocationsWaterlooRoute,
   AdminIndexRoute: AdminIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 import { ArrowRight, Calendar } from "lucide-react";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Painting & Renovation Blog | Expert Tips & Guides | Sudcan Painting" },
