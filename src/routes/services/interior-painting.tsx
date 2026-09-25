@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Phone, Sparkles, Clock, Shield, Award } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/interior-painting")({
   head: () => ({
@@ -31,6 +32,16 @@ export const Route = createFileRoute("/services/interior-painting")({
       
       // Canonical
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/interior-painting" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Interior Painting", url: "https://www.sudcanpainting.com/services/interior-painting" },
+        ])),
+      },
     ],
   }),
   component: InteriorPaintingPage,
@@ -309,6 +320,50 @@ function InteriorPaintingPage() {
             </div>
           </div>
         </Reveal>
+      </section>
+
+      {/* ── RELATED SERVICES ── */}
+      <section style={{ background: "#F5F0E6" }}>
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#B52E32]">
+                Related Services
+              </span>
+              <h2 className="mt-3 font-display text-4xl text-[#202321]">
+                Complete Your Project
+              </h2>
+            </div>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              { title: "Exterior Painting", desc: "Weather-resistant coatings for your home's exterior", link: "/services/exterior-painting" },
+              { title: "Cabinet Refinishing", desc: "Transform your kitchen with professional cabinet painting", link: "/services/cabinet-refinishing" },
+              { title: "Home Renovation", desc: "Complete home transformation services", link: "/services/home-renovation" },
+            ].map((service, i) => (
+              <Reveal key={service.title} delay={i * 0.1}>
+                <Link
+                  to={service.link}
+                  className="group block h-full p-6 transition-all hover:-translate-y-1"
+                  style={{
+                    borderRadius: "1.25rem",
+                    background: "#EDEADE",
+                    boxShadow: "0 3px 0 0 rgba(32,35,33,0.08), 0 10px 28px -6px rgba(32,35,33,0.12)",
+                    border: "1px solid rgba(198,161,91,0.18)",
+                  }}
+                >
+                  <h3 className="font-display text-xl text-[#202321] group-hover:text-[#B52E32] transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-[#687967]">{service.desc}</p>
+                  <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#B52E32]">
+                    Learn More <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
     </PageShell>

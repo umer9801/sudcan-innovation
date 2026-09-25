@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/blog/cabinet-refinishing-vs-replace")({
@@ -18,6 +19,45 @@ export const Route = createFileRoute("/blog/cabinet-refinishing-vs-replace")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Cabinet Refinishing vs Replace: Which Saves More?" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/blog/cabinet-refinishing-vs-replace" },
+    ],
+    scripts: [
+            {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Cabinet Refinishing vs Replace: Cost Comparison 2026",
+          "description": "Should you refinish or replace your kitchen cabinets? Complete cost breakdown, pros and cons, and decision guide for Kitchener-Waterloo homeowners.",
+          "datePublished": "2026-03-20",
+          "dateModified": "2026-03-20",
+          "author": {
+            "@type": "Organization",
+            "name": "Sudcan Painting",
+            "url": "https://www.sudcanpainting.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Sudcan Painting",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sudcanpainting.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sudcanpainting.com/blog/cabinet-refinishing-vs-replace"
+          }
+        })
+      },
+
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Blog", url: "https://www.sudcanpainting.com/blog" },
+          { name: "Cabinet Refinishing vs Replace", url: "https://www.sudcanpainting.com/blog/cabinet-refinishing-vs-replace" },
+        ])),
+      },
     ],
   }),
   component: BlogArticle,

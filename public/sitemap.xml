@@ -5,23 +5,31 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.sudcanpainting.com/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/home-renovation-complete-transformation.webp</image:loc>
+      <image:title>Professional Home Renovation in Kitchener</image:title>
+    </image:image>
   </url>
 
   <!-- About Page -->
   <url>
     <loc>https://www.sudcanpainting.com/about</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/professional-painter-craftsman-sudcan.webp</image:loc>
+      <image:title>Professional Painter Craftsman at Sudcan</image:title>
+    </image:image>
   </url>
 
   <!-- Services Page -->
   <url>
     <loc>https://www.sudcanpainting.com/services</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,7 +37,7 @@
   <!-- Contact Page -->
   <url>
     <loc>https://www.sudcanpainting.com/contact</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -37,7 +45,7 @@
   <!-- Quote Page -->
   <url>
     <loc>https://www.sudcanpainting.com/quote</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -45,89 +53,137 @@
   <!-- Portfolio Page -->
   <url>
     <loc>https://www.sudcanpainting.com/portfolio</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/interior-painting-living-room-kitchener.webp</image:loc>
+      <image:title>Interior Painting Living Room Kitchener</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/exterior-house-painting-waterloo.webp</image:loc>
+      <image:title>Exterior House Painting Waterloo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/kitchen-cabinet-refinishing-before-after.webp</image:loc>
+      <image:title>Kitchen Cabinet Refinishing Before After</image:title>
+    </image:image>
   </url>
 
   <!-- Service Pages -->
   <url>
     <loc>https://www.sudcanpainting.com/services/interior-painting</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/interior-painting-living-room-kitchener.webp</image:loc>
+      <image:title>Interior Painting Services Kitchener</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/exterior-painting</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/exterior-house-painting-waterloo.webp</image:loc>
+      <image:title>Exterior Painting Services Waterloo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/cabinet-refinishing</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/kitchen-cabinet-refinishing-before-after.webp</image:loc>
+      <image:title>Cabinet Refinishing Services</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/kitchen-remodeling</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/kitchen-remodeling-countertop-backsplash.webp</image:loc>
+      <image:title>Kitchen Remodeling Services</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/bathroom-renovation</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/bathroom-renovation-tile-work-cambridge.webp</image:loc>
+      <image:title>Bathroom Renovation Services Cambridge</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/hardwood-flooring</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/hardwood-floor-installation-living-room.webp</image:loc>
+      <image:title>Hardwood Flooring Installation</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/vinyl-flooring</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/vinyl-flooring-installation-basement.webp</image:loc>
+      <image:title>Vinyl Flooring Installation</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/tile-installation</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/tile-installation-shower-bathroom.webp</image:loc>
+      <image:title>Tile Installation Services</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/services/home-renovation</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.sudcanpainting.com/assets/home-renovation-complete-transformation.webp</image:loc>
+      <image:title>Complete Home Renovation</image:title>
+    </image:image>
   </url>
 
   <!-- Location Pages -->
   <url>
     <loc>https://www.sudcanpainting.com/locations/kitchener</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/locations/waterloo</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/locations/cambridge</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/locations/guelph</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -135,31 +191,31 @@
   <!-- Blog Pages -->
   <url>
     <loc>https://www.sudcanpainting.com/blog</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/blog/interior-painting-cost-kitchener-2026</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/blog/how-to-choose-paint-colors</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/blog/cabinet-refinishing-vs-replace</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.sudcanpainting.com/blog/best-exterior-paint-canadian-weather</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

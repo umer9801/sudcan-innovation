@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/tile-installation")({
   head: () => ({
@@ -11,6 +12,16 @@ export const Route = createFileRoute("/services/tile-installation")({
       { name: "keywords", content: "tile installation Kitchener, tile contractors Waterloo, porcelain tile, ceramic tile, backsplash installation, shower tile, natural stone tile Ontario, professional tile installers" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/tile-installation" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/tile-installation" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Tile Installation", url: "https://www.sudcanpainting.com/services/tile-installation" },
+        ])),
+      },
     ],
   }),
   component: TileInstallationPage,

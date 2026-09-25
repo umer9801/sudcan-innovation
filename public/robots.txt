@@ -1,11 +1,56 @@
-# robots.txt for sudcanpainting.com
+# robots.txt for Sudcan Painting
+# Optimized for search engine crawling
+
 User-agent: *
 Allow: /
+
+# Allow all CSS and JS for proper rendering
+Allow: /assets/*.css
+Allow: /assets/*.js
+Allow: /*.css$
+Allow: /*.js$
+
+# Disallow admin and backend paths
 Disallow: /admin/
-Disallow: /admin
+Disallow: /api/admin-login
+Disallow: /api/contacts
+Disallow: /api/quotes
+
+# Disallow template/test pages if any
+Disallow: /test/
+Disallow: /temp/
+Disallow: /_*
+
+# Allow all images for Google Image Search
+Allow: /assets/*.webp
+Allow: /assets/*.jpg
+Allow: /assets/*.jpeg
+Allow: /assets/*.png
+Allow: /assets/*.svg
 
 # Sitemap location
 Sitemap: https://www.sudcanpainting.com/sitemap.xml
 
-# Crawl-delay (optional, helps with server load)
-Crawl-delay: 1
+# Crawl-delay (optional, only if needed)
+# User-agent: *
+# Crawl-delay: 1
+
+# Specific bot configurations
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+
+# Block AI scrapers (optional - uncomment if desired)
+# User-agent: GPTBot
+# Disallow: /
+# 
+# User-agent: CCBot
+# Disallow: /
+# 
+# User-agent: anthropic-ai
+# Disallow: /

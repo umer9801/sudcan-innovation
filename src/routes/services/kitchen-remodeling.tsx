@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, ChefHat } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/kitchen-remodeling")({
   head: () => ({
@@ -11,6 +12,16 @@ export const Route = createFileRoute("/services/kitchen-remodeling")({
       { name: "keywords", content: "kitchen renovation Kitchener, kitchen remodeling Waterloo, custom kitchen, kitchen design, kitchen contractors, affordable kitchen update, modern kitchen design Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/kitchen-remodeling" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/kitchen-remodeling" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Kitchen Remodeling", url: "https://www.sudcanpainting.com/services/kitchen-remodeling" },
+        ])),
+      },
     ],
   }),
   component: KitchenRemodelingPage,

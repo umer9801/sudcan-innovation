@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/log.jpeg";
+import logo from "@/assets/sudcan-painting-logo.webp";
 
 const links = [
   { to: "/", label: "Home" },
@@ -51,7 +51,10 @@ export function Navbar() {
           >
             <img
               src={logo}
-              alt="Sudcan Innovation Inc"
+              alt="Sudcan Painting - Professional painting and renovation services in Kitchener-Waterloo Ontario"
+              width={40}
+              height={40}
+              loading="eager"
               className="h-11 w-11 rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>

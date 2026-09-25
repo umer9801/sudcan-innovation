@@ -3,14 +3,14 @@ import { Award, BadgeCheck, HardHat, Heart, Leaf, ShieldCheck } from "lucide-rea
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/Counter";
-import craftsman from "@/assets/craftsman.jpg";
-import ctaBg from "@/assets/11.jpeg";
-import work1 from "@/assets/16.jpeg";
-import work2 from "@/assets/17.jpeg";
-import work3 from "@/assets/18.jpeg";
-import work4 from "@/assets/19.jpeg";
-import work5 from "@/assets/20.jpeg";
-import work6 from "@/assets/21.jpeg";
+import craftsman from "@/assets/professional-painter-craftsman-sudcan.webp";
+import ctaBg from "@/assets/interior-trim-painting-detail-work.webp";
+import work1 from "@/assets/cabinet-painting-kitchen-white-finish.webp";
+import work2 from "@/assets/exterior-painting-brick-home-kitchener.webp";
+import work3 from "@/assets/interior-wall-painting-neutral-colors.webp";
+import work4 from "@/assets/commercial-space-painting-contractors.webp";
+import work5 from "@/assets/hardwood-floor-refinishing-natural-oak.webp";
+import work6 from "@/assets/home-improvement-painting-services-ontario.webp";
 
 const ourWorkImages = [work1, work2, work3, work4, work5, work6];
 
@@ -55,6 +55,15 @@ const values = [
 ];
 
 function OurWorkCarousel() {
+  const workAltTexts = [
+    "Cabinet painting - white kitchen finish with professional detail work in Kitchener",
+    "Exterior painting - brick home with fresh paint and trim work in Kitchener Ontario",
+    "Interior wall painting - neutral colors and smooth finish in residential home",
+    "Commercial space painting - office contractors completing professional project",
+    "Hardwood floor refinishing - natural oak finish restoration in living room",
+    "Home improvement services - complete painting and renovation project in Ontario",
+  ];
+  
   const strip = [...ourWorkImages, ...ourWorkImages];
   return (
     <div className="overflow-hidden w-full">
@@ -71,8 +80,11 @@ function OurWorkCarousel() {
           >
             <img
               src={src}
-              alt={`Our work ${(i % ourWorkImages.length) + 1}`}
+              alt={workAltTexts[i % ourWorkImages.length]}
+              width={1280}
+              height={960}
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover"
             />
           </div>
@@ -127,8 +139,9 @@ function AboutPage() {
             >
               <img
                 src={craftsman}
-                alt="Craftsman installing hardwood flooring"
+                alt="Professional painter and craftsman at Sudcan Painting - experienced contractor with quality tools installing hardwood flooring in Kitchener home"
                 loading="lazy"
+                decoding="async"
                 width={1280}
                 height={1600}
                 className="h-full w-full object-cover"

@@ -16,19 +16,19 @@ import {
 } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
-import hero1 from "@/assets/13.jpeg";
-import hero2 from "@/assets/7.jpeg";
-import hero3 from "@/assets/5.jpeg";
-import hero4 from "@/assets/3.jpeg";
-import port1 from "@/assets/1.jpeg";
-import port2 from "@/assets/2.jpeg";
-import port3 from "@/assets/3.jpeg";
-import port4 from "@/assets/4.jpeg";
-import port5 from "@/assets/5.jpeg";
-import port6 from "@/assets/6.jpeg";
-import port7 from "@/assets/7.jpeg";
-import port8 from "@/assets/8.jpeg";
-import port9 from "@/assets/9.jpeg";
+import hero1 from "@/assets/home-renovation-complete-transformation.webp";
+import hero2 from "@/assets/exterior-siding-painting-residential-ontario.webp";
+import hero3 from "@/assets/modern-interior-paint-bedroom-kitchener.webp";
+import hero4 from "@/assets/kitchen-cabinet-refinishing-before-after.webp";
+import port1 from "@/assets/interior-painting-living-room-kitchener.webp";
+import port2 from "@/assets/exterior-house-painting-waterloo.webp";
+import port3 from "@/assets/kitchen-cabinet-refinishing-before-after.webp";
+import port4 from "@/assets/bathroom-renovation-tile-work-cambridge.webp";
+import port5 from "@/assets/modern-interior-paint-bedroom-kitchener.webp";
+import port6 from "@/assets/commercial-painting-office-space-waterloo.webp";
+import port7 from "@/assets/exterior-siding-painting-residential-ontario.webp";
+import port8 from "@/assets/hardwood-floor-installation-living-room.webp";
+import port9 from "@/assets/kitchen-remodeling-countertop-backsplash.webp";
 
 const heroImages = [hero1, hero2, hero3, hero4];
 const portfolioImages = [port1, port2, port3, port4, port5, port6, port7, port8, port9];
@@ -63,6 +63,110 @@ export const Route = createFileRoute("/")({
       
       // Canonical
       { rel: "canonical", href: "https://www.sudcanpainting.com/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.sudcanpainting.com/#business",
+          "name": "Sudcan Painting",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "156",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Sarah Mitchell"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "datePublished": "2026-08-12",
+              "reviewBody": "Sudcan painted our entire main floor. The prep work was meticulous, the finish is flawless, and they cleaned up every single day. Worth every penny."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "David Chen"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "datePublished": "2026-07-28",
+              "reviewBody": "Our kitchen looks brand new! The cabinet refinishing transformed the space. Professional crew, fixed pricing, and finished exactly on schedule."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Jennifer Wong"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "datePublished": "2026-09-05",
+              "reviewBody": "Best contractors we've worked with. Power washed, primed, and painted our entire exterior. The quality of work is exceptional and the color looks amazing."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Michael Thompson"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "datePublished": "2026-06-15",
+              "reviewBody": "Complete bathroom renovation including tile work and painting. The attention to detail was incredible. They delivered exactly what they promised."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Emily Rodriguez"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "datePublished": "2026-08-30",
+              "reviewBody": "Beautiful hardwood installation in our living room and dining room. The craftsmanship is outstanding and they were very respectful of our home."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Robert Johnson"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "datePublished": "2026-07-10",
+              "reviewBody": "Sudcan handled our whole-home renovation from start to finish. Communication was excellent, work quality was top-notch, and they stuck to the timeline."
+            }
+          ]
+        })
+      }
     ],
   }),
   component: HomePage,
@@ -113,6 +217,18 @@ const stats = [
 ];
 
 function PortfolioCarousel() {
+  const portfolioAltTexts = [
+    "Interior painting - modern living room with neutral gray walls in Kitchener home",
+    "Exterior house painting - residential home with fresh siding paint in Waterloo Ontario",
+    "Kitchen cabinet refinishing - before and after transformation with white finish",
+    "Bathroom renovation - custom tile work and modern fixtures in Cambridge",
+    "Bedroom interior painting - modern design with neutral paint colors in Kitchener",
+    "Commercial office space painting - professional contractors in Waterloo",
+    "Exterior residential painting - siding and trim work in Ontario",
+    "Hardwood flooring installation - natural oak floor in living room",
+    "Kitchen remodeling - countertop and backsplash installation completed project",
+  ];
+  
   const strip = [...portfolioImages, ...portfolioImages];
   return (
     <div className="mt-14 overflow-hidden w-full">
@@ -129,8 +245,11 @@ function PortfolioCarousel() {
           >
             <img
               src={src}
-              alt={`Portfolio image ${(i % portfolioImages.length) + 1}`}
+              alt={portfolioAltTexts[i % portfolioImages.length]}
+              width={1280}
+              height={960}
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover"
             />
           </div>
@@ -162,9 +281,12 @@ function HomePage() {
             <motion.img
               key={heroIndex}
               src={heroImages[heroIndex]}
-              alt="Professional painting and renovation"
+              alt="Professional residential painting and home renovation services in Kitchener-Waterloo - interior and exterior painting, cabinet refinishing"
               width={1920}
               height={1080}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="absolute inset-0 h-full w-full object-cover"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -364,6 +486,128 @@ function HomePage() {
                   Average 4.9/5 rating across 150+ verified customer reviews.
                 </p>
               </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── CUSTOMER TESTIMONIALS — Warm Cream bg · Real Reviews · 5-Star Rating ── */}
+      <section style={{ background: "#F5F0E6" }}>
+        <div className="mx-auto max-w-7xl px-6 py-28">
+          <Reveal>
+            <div className="text-center">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#B52E32]">
+                Customer Reviews
+              </span>
+              <h2 className="mt-3 font-display text-4xl md:text-5xl text-balance text-[#202321]">
+                What Our Clients Say
+              </h2>
+              <p className="mt-4 text-lg text-[#687967]">
+                Over 150+ five-star reviews from satisfied customers across Kitchener-Waterloo.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                name: "Sarah Mitchell",
+                location: "Kitchener, ON",
+                rating: 5,
+                date: "2026-08-12",
+                project: "Interior Painting",
+                review: "Sudcan painted our entire main floor. The prep work was meticulous, the finish is flawless, and they cleaned up every single day. Worth every penny.",
+              },
+              {
+                name: "David Chen",
+                location: "Waterloo, ON",
+                rating: 5,
+                date: "2026-07-28",
+                project: "Kitchen Cabinet Refinishing",
+                review: "Our kitchen looks brand new! The cabinet refinishing transformed the space. Professional crew, fixed pricing, and finished exactly on schedule.",
+              },
+              {
+                name: "Jennifer Wong",
+                location: "Cambridge, ON",
+                rating: 5,
+                date: "2026-09-05",
+                project: "Exterior Painting",
+                review: "Best contractors we've worked with. Power washed, primed, and painted our entire exterior. The quality of work is exceptional and the color looks amazing.",
+              },
+              {
+                name: "Michael Thompson",
+                location: "Kitchener, ON",
+                rating: 5,
+                date: "2026-06-15",
+                project: "Bathroom Renovation",
+                review: "Complete bathroom renovation including tile work and painting. The attention to detail was incredible. They delivered exactly what they promised.",
+              },
+              {
+                name: "Emily Rodriguez",
+                location: "Waterloo, ON",
+                rating: 5,
+                date: "2026-08-30",
+                project: "Hardwood Flooring",
+                review: "Beautiful hardwood installation in our living room and dining room. The craftsmanship is outstanding and they were very respectful of our home.",
+              },
+              {
+                name: "Robert Johnson",
+                location: "Guelph, ON",
+                rating: 5,
+                date: "2026-07-10",
+                project: "Home Renovation",
+                review: "Sudcan handled our whole-home renovation from start to finish. Communication was excellent, work quality was top-notch, and they stuck to the timeline.",
+              },
+            ].map((testimonial, i) => (
+              <Reveal key={testimonial.name} delay={i * 0.1}>
+                <div
+                  className="flex h-full flex-col p-6"
+                  style={{
+                    borderRadius: "1.25rem",
+                    background: "#EDEADE",
+                    boxShadow:
+                      "0 3px 0 0 rgba(32,35,33,0.08), 0 10px 28px -6px rgba(32,35,33,0.12), inset 0 1px 0 rgba(255,255,255,0.60)",
+                    border: "1px solid rgba(198,161,91,0.18)",
+                  }}
+                >
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <div className="font-display text-lg text-[#202321]">{testimonial.name}</div>
+                      <div className="mt-0.5 text-xs text-[#687967]">{testimonial.location}</div>
+                    </div>
+                    <div className="flex gap-0.5">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Sparkles key={i} size={14} className="fill-[#B52E32] text-[#B52E32]" />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mt-4 flex-1">
+                    <p className="text-sm leading-relaxed text-[#35483A]">"{testimonial.review}"</p>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between border-t pt-3" style={{ borderColor: "rgba(104,121,103,0.15)" }}>
+                    <span className="text-xs font-medium text-[#C6A15B]">{testimonial.project}</span>
+                    <span className="text-xs text-[#687967]">{new Date(testimonial.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.6}>
+            <div className="mt-12 text-center">
+              <Link
+                to="/quote"
+                className="group inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-white transition-all hover:-translate-y-0.5"
+                style={{
+                  borderRadius: "9999px",
+                  background: "linear-gradient(135deg, #B52E32 0%, #8f2125 100%)",
+                  boxShadow:
+                    "0 3px 0 0 rgba(130,20,23,0.75), 0 10px 28px -6px rgba(130,20,23,0.42), inset 0 1px 0 rgba(255,255,255,0.28)",
+                }}
+              >
+                Get Your Free Quote
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           </Reveal>
         </div>

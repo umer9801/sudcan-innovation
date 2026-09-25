@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/hardwood-flooring")({
   head: () => ({
@@ -11,6 +12,16 @@ export const Route = createFileRoute("/services/hardwood-flooring")({
       { name: "keywords", content: "hardwood flooring Kitchener, hardwood installation Waterloo, oak flooring, engineered hardwood, floor refinishing, wide plank flooring, European oak Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/hardwood-flooring" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/hardwood-flooring" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Hardwood Flooring", url: "https://www.sudcanpainting.com/services/hardwood-flooring" },
+        ])),
+      },
     ],
   }),
   component: HardwoodFlooringPage,

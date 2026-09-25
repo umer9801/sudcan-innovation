@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Phone, Cloud, Shield, Clock, Award } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/exterior-painting")({
   head: () => ({
@@ -25,6 +26,16 @@ export const Route = createFileRoute("/services/exterior-painting")({
       
       // Canonical
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/exterior-painting" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Exterior Painting", url: "https://www.sudcanpainting.com/services/exterior-painting" },
+        ])),
+      },
     ],
   }),
   component: ExteriorPaintingPage,

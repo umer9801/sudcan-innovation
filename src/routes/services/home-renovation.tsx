@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/home-renovation")({
   head: () => ({
@@ -11,6 +12,16 @@ export const Route = createFileRoute("/services/home-renovation")({
       { name: "keywords", content: "home renovation Kitchener, home remodeling Waterloo, house renovation, general contractor, design-build, home additions, whole home renovation Ontario, renovation contractors" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/home-renovation" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/home-renovation" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Home Renovation", url: "https://www.sudcanpainting.com/services/home-renovation" },
+        ])),
+      },
     ],
   }),
   component: HomeRenovationPage,

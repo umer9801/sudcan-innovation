@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Phone, Sparkles, DollarSign } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/cabinet-refinishing")({
   head: () => ({
@@ -16,6 +17,16 @@ export const Route = createFileRoute("/services/cabinet-refinishing")({
       { property: "og:title", content: "Cabinet Refinishing Kitchener | Sudcan Painting" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/cabinet-refinishing" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/cabinet-refinishing" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Cabinet Refinishing", url: "https://www.sudcanpainting.com/services/cabinet-refinishing" },
+        ])),
+      },
     ],
   }),
   component: CabinetRefinishingPage,

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/log.jpeg";
+import logo from "@/assets/sudcan-painting-logo.webp";
 
 export function Footer() {
   return (
@@ -22,7 +22,10 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img
                 src={logo}
-                alt="Sudcan Painting"
+                alt="Sudcan Painting logo - Professional residential and commercial painting contractor Kitchener Ontario"
+                width={48}
+                height={48}
+                loading="lazy"
                 className="h-12 w-12 rounded-xl object-cover"
                 style={{ boxShadow: "0 4px 12px rgba(32,35,33,0.5)" }}
               />

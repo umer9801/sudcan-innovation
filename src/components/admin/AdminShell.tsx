@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { BarChart3, FileText, LogOut, MessageSquare, Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/log.jpeg";
+import logo from "@/assets/sudcan-painting-logo.webp";
 
 const navItems = [
   { to: "/admin",          label: "Dashboard", icon: BarChart3,     exact: true },
@@ -33,7 +33,7 @@ export function AdminShell({ children, title }: { children: ReactNode; title: st
         className="flex items-center gap-3 px-6 py-5"
         style={{ borderBottom: "1px solid rgba(198,161,91,0.16)" }}
       >
-        <img src={logo} alt="Sudcan Innovation Inc" className="h-9 w-9 rounded-lg object-cover" />
+        <img src={logo} alt="Sudcan Painting Admin Portal logo" className="h-9 w-9 rounded-lg object-cover" />
         <div>
           <div className="text-sm font-semibold text-[#F5F0E6]">Sudcan Admin</div>
           <div className="text-xs text-[#687967]">Management Panel</div>

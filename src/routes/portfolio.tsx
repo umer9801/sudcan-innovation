@@ -5,27 +5,27 @@ import { Reveal } from "@/components/Reveal";
 import { ArrowRight, Phone } from "lucide-react";
 
 // Import portfolio images
-import img1 from "@/assets/1.jpeg";
-import img2 from "@/assets/2.jpeg";
-import img3 from "@/assets/3.jpeg";
-import img4 from "@/assets/4.jpeg";
-import img5 from "@/assets/5.jpeg";
-import img6 from "@/assets/6.jpeg";
-import img7 from "@/assets/7.jpeg";
-import img8 from "@/assets/8.jpeg";
-import img9 from "@/assets/9.jpeg";
-import img10 from "@/assets/10.jpeg";
-import img11 from "@/assets/11.jpeg";
-import img12 from "@/assets/12.jpeg";
-import img13 from "@/assets/13.jpeg";
-import img14 from "@/assets/14.jpeg";
-import img15 from "@/assets/15.jpeg";
-import img16 from "@/assets/16.jpeg";
-import img17 from "@/assets/17.jpeg";
-import img18 from "@/assets/18.jpeg";
-import img19 from "@/assets/19.jpeg";
-import img20 from "@/assets/20.jpeg";
-import img21 from "@/assets/21.jpeg";
+import img1 from "@/assets/interior-painting-living-room-kitchener.webp";
+import img2 from "@/assets/exterior-house-painting-waterloo.webp";
+import img3 from "@/assets/kitchen-cabinet-refinishing-before-after.webp";
+import img4 from "@/assets/bathroom-renovation-tile-work-cambridge.webp";
+import img5 from "@/assets/modern-interior-paint-bedroom-kitchener.webp";
+import img6 from "@/assets/commercial-painting-office-space-waterloo.webp";
+import img7 from "@/assets/exterior-siding-painting-residential-ontario.webp";
+import img8 from "@/assets/hardwood-floor-installation-living-room.webp";
+import img9 from "@/assets/kitchen-remodeling-countertop-backsplash.webp";
+import img10 from "@/assets/bathroom-vanity-renovation-modern-design.webp";
+import img11 from "@/assets/interior-trim-painting-detail-work.webp";
+import img12 from "@/assets/exterior-deck-staining-refinishing.webp";
+import img13 from "@/assets/home-renovation-complete-transformation.webp";
+import img14 from "@/assets/vinyl-flooring-installation-basement.webp";
+import img15 from "@/assets/tile-installation-shower-bathroom.webp";
+import img16 from "@/assets/cabinet-painting-kitchen-white-finish.webp";
+import img17 from "@/assets/exterior-painting-brick-home-kitchener.webp";
+import img18 from "@/assets/interior-wall-painting-neutral-colors.webp";
+import img19 from "@/assets/commercial-space-painting-contractors.webp";
+import img20 from "@/assets/hardwood-floor-refinishing-natural-oak.webp";
+import img21 from "@/assets/home-improvement-painting-services-ontario.webp";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -217,8 +217,11 @@ function PortfolioPage() {
                     <img
                       src={project.img}
                       alt={`${project.title} - ${project.category} in ${project.location}`}
+                      width={1280}
+                      height={960}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div

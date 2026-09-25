@@ -18,8 +18,8 @@ import {
 } from "@/components/ui/accordion";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
-import beforeImg from "@/assets/12.jpeg";
-import afterImg from "@/assets/10.jpeg";
+import beforeImg from "@/assets/exterior-deck-staining-refinishing.webp";
+import afterImg from "@/assets/bathroom-vanity-renovation-modern-design.webp";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
@@ -314,8 +314,8 @@ function ServicesPage() {
 
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
-              { src: beforeImg, alt: "Before renovation",   label: "The Space",          tag: "Before" },
-              { src: afterImg,  alt: "After renovation",    label: "The Transformation", tag: "After"  },
+              { src: beforeImg, alt: "Before home renovation - exterior deck needing staining and refinishing work in Kitchener Ontario",   label: "The Space",          tag: "Before" },
+              { src: afterImg,  alt: "After bathroom renovation - modern vanity design with custom fixtures and tile work completed in Waterloo",    label: "The Transformation", tag: "After"  },
             ].map((item, i) => (
               <Reveal key={item.tag} delay={i * 0.1}>
                 <div
@@ -330,6 +330,7 @@ function ServicesPage() {
                     src={item.src}
                     alt={item.alt}
                     loading="lazy"
+                    decoding="async"
                     width={1280}
                     height={960}
                     className="aspect-[4/3] w-full object-cover transition-transform duration-[1.4s] group-hover:scale-105"

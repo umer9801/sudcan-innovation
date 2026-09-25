@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/vinyl-flooring")({
   head: () => ({
@@ -11,6 +12,16 @@ export const Route = createFileRoute("/services/vinyl-flooring")({
       { name: "keywords", content: "vinyl flooring Kitchener, LVP installation Waterloo, luxury vinyl plank, waterproof flooring, vinyl tile installation, durable flooring Ontario, affordable vinyl flooring" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/vinyl-flooring" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/vinyl-flooring" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Vinyl Flooring", url: "https://www.sudcanpainting.com/services/vinyl-flooring" },
+        ])),
+      },
     ],
   }),
   component: VinylFlooringPage,

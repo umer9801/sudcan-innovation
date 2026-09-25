@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, Bath } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/services/bathroom-renovation")({
   head: () => ({
@@ -11,6 +12,16 @@ export const Route = createFileRoute("/services/bathroom-renovation")({
       { name: "keywords", content: "bathroom renovation Kitchener, bathroom remodeling Waterloo, shower installation, bathroom contractors, tile installation, spa bathroom, luxury bathroom design Ontario" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/bathroom-renovation" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/bathroom-renovation" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Services", url: "https://www.sudcanpainting.com/services" },
+          { name: "Bathroom Renovation", url: "https://www.sudcanpainting.com/services/bathroom-renovation" },
+        ])),
+      },
     ],
   }),
   component: BathroomRenovationPage,

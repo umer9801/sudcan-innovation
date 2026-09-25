@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { verifyAdminLogin } from "../../lib/api/admin";
-import logo from "@/assets/log.jpeg";
+import logo from "@/assets/sudcan-painting-logo.webp";
 
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
@@ -58,7 +58,7 @@ function AdminLogin() {
         <div className="mb-8 flex items-center gap-3">
           <img
             src={logo}
-            alt="Sudcan Innovation Inc"
+            alt="Sudcan Painting company logo - Admin login portal"
             className="h-10 w-10 rounded-lg object-cover"
             style={{ boxShadow: "0 3px 10px rgba(32,35,33,0.28)" }}
           />

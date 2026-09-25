@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/blog/interior-painting-cost-kitchener-2026")({
@@ -55,7 +56,15 @@ export const Route = createFileRoute("/blog/interior-painting-cost-kitchener-202
             }
           }
         })
-      }
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Blog", url: "https://www.sudcanpainting.com/blog" },
+          { name: "Interior Painting Cost Kitchener 2026", url: "https://www.sudcanpainting.com/blog/interior-painting-cost-kitchener-2026" },
+        ])),
+      },
     ],
   }),
   component: BlogArticle,

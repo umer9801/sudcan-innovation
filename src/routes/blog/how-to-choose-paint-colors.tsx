@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/blog/how-to-choose-paint-colors")({
@@ -22,6 +23,85 @@ export const Route = createFileRoute("/blog/how-to-choose-paint-colors")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "How to Choose Paint Colors That Actually Work" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/blog/how-to-choose-paint-colors" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "How to Choose Paint Colors That Actually Work",
+          "description": "Professional colour consultation tips for choosing paint colors. Learn how lighting, room size, and décor affect your perfect shade.",
+          "datePublished": "2026-03-18",
+          "dateModified": "2026-03-18",
+          "author": {
+            "@type": "Organization",
+            "name": "Sudcan Painting",
+            "url": "https://www.sudcanpainting.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Sudcan Painting",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sudcanpainting.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sudcanpainting.com/blog/how-to-choose-paint-colors"
+          }
+        })
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "How to Choose the Perfect Paint Color",
+          "description": "Step-by-step guide to selecting paint colors that work with your lighting, furniture, and lifestyle.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Test in Your Actual Lighting",
+              "text": "Paint large swatches (at least 2'×2') on multiple walls. Observe morning, afternoon, and evening light. North-facing rooms read cooler; south-facing warmer.",
+              "position": 1
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Consider Your Existing Décor",
+              "text": "Pull colors from existing furniture, rugs, or artwork. Use undertones that complement what you already own rather than fighting against it.",
+              "position": 2
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Account for Room Size and Ceiling Height",
+              "text": "Small rooms benefit from lighter shades to open up space. Large rooms can handle deeper, richer tones. Higher ceilings pair well with darker accent walls.",
+              "position": 3
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Think About Traffic Flow",
+              "text": "Colors should flow naturally from room to room. Use a cohesive palette with variations in tone rather than jarring contrasts between adjacent spaces.",
+              "position": 4
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Factor in Sheen and Finish",
+              "text": "Matte hides imperfections but shows marks. Eggshell and satin are versatile. Semi-gloss works for trim and high-traffic areas. High-gloss is dramatic but unforgiving.",
+              "position": 5
+            }
+          ]
+        })
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Blog", url: "https://www.sudcanpainting.com/blog" },
+          { name: "How to Choose Paint Colors", url: "https://www.sudcanpainting.com/blog/how-to-choose-paint-colors" },
+        ])),
+      },
     ],
   }),
   component: BlogArticle,
@@ -157,6 +237,49 @@ function BlogArticle() {
               </div>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ── RELATED ARTICLES ── */}
+      <section style={{ background: "#F5F0E6" }}>
+        <div className="mx-auto max-w-4xl px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#B52E32]">
+                Related Articles
+              </span>
+              <h2 className="mt-3 font-display text-3xl text-[#202321]">
+                Continue Reading
+              </h2>
+            </div>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {[
+              { title: "Interior Painting Cost Kitchener 2026", desc: "Complete pricing guide for interior painting projects", link: "/blog/interior-painting-cost-kitchener-2026" },
+              { title: "Best Exterior Paint for Canadian Weather", desc: "Top paint recommendations for harsh winters", link: "/blog/best-exterior-paint-canadian-weather" },
+            ].map((article, i) => (
+              <Reveal key={article.title} delay={i * 0.1}>
+                <Link
+                  to={article.link}
+                  className="group block h-full p-6 transition-all hover:-translate-y-1"
+                  style={{
+                    borderRadius: "1.25rem",
+                    background: "#EDEADE",
+                    boxShadow: "0 3px 0 0 rgba(32,35,33,0.08), 0 10px 28px -6px rgba(32,35,33,0.12)",
+                    border: "1px solid rgba(198,161,91,0.18)",
+                  }}
+                >
+                  <h3 className="font-display text-lg text-[#202321] group-hover:text-[#B52E32] transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-[#687967]">{article.desc}</p>
+                  <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#B52E32]">
+                    Read Article <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </PageShell>

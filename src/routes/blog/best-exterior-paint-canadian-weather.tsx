@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { createBreadcrumbSchema } from "@/lib/schema";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/blog/best-exterior-paint-canadian-weather")({
@@ -18,6 +19,45 @@ export const Route = createFileRoute("/blog/best-exterior-paint-canadian-weather
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Best Exterior Paint for Canadian Weather 2026" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/blog/best-exterior-paint-canadian-weather" },
+    ],
+    scripts: [
+            {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Best Exterior Paint for Canadian Weather and Winters",
+          "description": "Top exterior paint brands and types that withstand harsh Canadian winters. Expert recommendations for Kitchener-Waterloo climate.",
+          "datePublished": "2026-03-22",
+          "dateModified": "2026-03-22",
+          "author": {
+            "@type": "Organization",
+            "name": "Sudcan Painting",
+            "url": "https://www.sudcanpainting.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Sudcan Painting",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sudcanpainting.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sudcanpainting.com/blog/best-exterior-paint-canadian-weather"
+          }
+        })
+      },
+
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(createBreadcrumbSchema([
+          { name: "Home", url: "https://www.sudcanpainting.com/" },
+          { name: "Blog", url: "https://www.sudcanpainting.com/blog" },
+          { name: "Best Exterior Paint for Canadian Weather", url: "https://www.sudcanpainting.com/blog/best-exterior-paint-canadian-weather" },
+        ])),
+      },
     ],
   }),
   component: BlogArticle,
