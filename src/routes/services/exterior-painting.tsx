@@ -8,14 +8,14 @@ export const Route = createFileRoute("/services/exterior-painting")({
   head: () => ({
     meta: [
       { 
-        title: "Exterior Painting Services Kitchener | Weather-Resistant House Painting | Sudcan" 
+        title: "Exterior House Painters Kitchener | Siding Painting Near Me | Sudcan" 
       },
       {
         name: "description",
         content:
-          "Professional exterior house painting in Kitchener-Waterloo. Weather-resistant coatings, power washing, expert prep. Stand up to Canadian winters. Free quotes. (226) 600-6637.",
+          "Top exterior painters Kitchener-Waterloo. Power washing included. Weather-resistant paint. 300+ homes painted. Same-day quotes. 5-year durability. (226) 600-6637.",
       },
-      { name: "keywords", content: "exterior painting Kitchener, house painting Waterloo, exterior painters, siding painting, deck staining, fence painting, pressure washing, weather-resistant paint, durable exterior coating Ontario" },
+      { name: "keywords", content: "exterior painters kitchener, house painters near me, siding painters waterloo, exterior painting contractors kitchener, residential exterior painters, deck staining kitchener, fence painting waterloo, power washing painting, weather resistant paint ontario, exterior house painting cost kitchener" },
       
       // Open Graph
       { property: "og:title", content: "Exterior Painting Services Kitchener | Sudcan Painting" },

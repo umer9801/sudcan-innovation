@@ -8,18 +8,18 @@ export const Route = createFileRoute("/services/interior-painting")({
   head: () => ({
     meta: [
       { 
-        title: "Interior Painting Services Kitchener | Professional House Painters | Sudcan Painting" 
+        title: "Interior House Painters Kitchener | Room Painting Near Me | Sudcan" 
       },
       {
         name: "description",
         content:
-          "Professional interior painting in Kitchener-Waterloo. Expert prep, premium Benjamin Moore paint, flawless finish. 18+ years experience. Free quotes. 2-year warranty. Call (226) 600-6637.",
+          "Top-rated interior painters in Kitchener-Waterloo. 500+ rooms painted. Benjamin Moore premium paint. Same-day quotes. 2-year warranty. Licensed. Call (226) 600-6637.",
       },
-      { name: "keywords", content: "interior painting Kitchener, house painters Waterloo, room painting, wall painting, ceiling painting, residential painting, home painters near me, affordable interior painting, professional painters Ontario, trim painting" },
+      { name: "keywords", content: "interior painters kitchener, house painters near me, room painting waterloo, interior painting contractors kitchener, residential painters near me, best interior painters waterloo, painters kitchener ontario, home painters cambridge, wall painters near me, painting company kitchener, interior house painting cost" },
       
       // Open Graph
-      { property: "og:title", content: "Interior Painting Services Kitchener | Sudcan Painting" },
-      { property: "og:description", content: "Professional interior painting with premium materials. Expert prep, flawless finish. Free quotes. Kitchener-Waterloo." },
+      { property: "og:title", content: "Interior Painters Kitchener | 500+ Rooms Painted | 2-Yr Warranty" },
+      { property: "og:description", content: "Best interior house painters in Kitchener-Waterloo. Benjamin Moore paint. Licensed. Same-day quotes. (226) 600-6637" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/interior-painting" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Sudcan Painting" },
@@ -41,6 +41,101 @@ export const Route = createFileRoute("/services/interior-painting")({
           { name: "Services", url: "https://www.sudcanpainting.com/services" },
           { name: "Interior Painting", url: "https://www.sudcanpainting.com/services/interior-painting" },
         ])),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Interior Painting",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Sudcan Painting",
+            "telephone": "+1-226-600-6637",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "286 Driftwood Dr",
+              "addressLocality": "Kitchener",
+              "addressRegion": "ON",
+              "postalCode": "N2N 1X6",
+              "addressCountry": "CA"
+            }
+          },
+          "areaServed": [
+            {"@type": "City", "name": "Kitchener"},
+            {"@type": "City", "name": "Waterloo"},
+            {"@type": "City", "name": "Cambridge"},
+            {"@type": "City", "name": "Guelph"}
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "CAD",
+            "priceRange": "$$"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "156",
+            "bestRating": "5"
+          }
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does interior painting cost in Kitchener-Waterloo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Interior painting costs vary by room size and prep work required. A single bedroom (12×12) typically costs $400-$800, while a full 2,000 sq ft home interior ranges from $5,000-$10,000. We provide free in-home quotes with transparent, fixed pricing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to paint a house interior?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Timeline depends on project scope. A single room takes 1-2 days, a full home (5-7 rooms) takes 5-7 business days. Larger homes (3,000+ sq ft) may take 10-14 days. We provide a detailed timeline in your quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you move furniture before painting?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! We move furniture away from walls, protect it with drop cloths, and return everything to its original position when done. We can work around heavy furniture like pianos or entertainment centers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What paint brands do you use for interior painting?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We primarily use Benjamin Moore paints - specifically Regal Select for walls and Advance for trim. Benjamin Moore offers superior coverage, durability, and color retention. All paints are low-VOC for indoor air quality."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer a warranty on interior painting?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we provide a 2-year workmanship warranty on all interior painting. If paint peels, cracks, or fails due to application issues, we'll fix it at no charge. Benjamin Moore paint also comes with their manufacturer's warranty."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are you licensed and insured in Ontario?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Sudcan Painting is fully licensed, bonded, and insured in Ontario. We carry $2 million liability insurance and WSIB coverage. You'll never have liability for accidents on your property."
+              }
+            }
+          ]
+        }),
       },
     ],
   }),
@@ -88,12 +183,12 @@ function InteriorPaintingPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-4 max-w-4xl font-display text-5xl leading-[1.05] text-balance text-[#202321] md:text-7xl">
-              Interior Painting Kitchener-Waterloo — <span className="italic text-[#C6A15B]">Fresh Walls, Flawless Finish</span>
+              Interior House Painters <span className="italic text-[#C6A15B]">Kitchener-Waterloo</span>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-2xl text-lg text-[#687967]">
-              Transform every room with professional interior painting. Premium Benjamin Moore paints, meticulous prep, and expert application. Serving Kitchener, Waterloo, Cambridge, and Guelph for 18+ years.
+              Professional room painting services near you. We've transformed 500+ homes in Kitchener, Waterloo, Cambridge, and Guelph. Premium Benjamin Moore paints, meticulous prep, 2-year warranty. Licensed and insured since 2008.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
@@ -320,6 +415,112 @@ function InteriorPaintingPage() {
             </div>
           </div>
         </Reveal>
+      </section>
+
+      {/* ── FAQ SECTION ── */}
+      <section style={{ background: "#FFFDF8" }}>
+        <div className="mx-auto max-w-4xl px-6 py-28">
+          <Reveal>
+            <div className="text-center">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#B52E32]">
+                Common Questions
+              </span>
+              <h2 className="mt-3 font-display text-4xl md:text-5xl text-balance text-[#202321]">
+                Interior Painting FAQs — Kitchener-Waterloo
+              </h2>
+              <p className="mt-4 text-[#687967]">
+                Everything you need to know about our interior house painting services.
+              </p>
+            </div>
+          </Reveal>
+          
+          <div className="mt-14 space-y-6">
+            {[
+              {
+                q: "How much does interior painting cost in Kitchener-Waterloo?",
+                a: "Interior painting costs vary by room size and prep work required. A single bedroom (12×12) typically costs $400-$800, while a full 2,000 sq ft home interior ranges from $5,000-$10,000. We provide free in-home quotes with transparent, fixed pricing. Factors affecting cost include ceiling height, surface condition, number of coats, and trim work."
+              },
+              {
+                q: "How long does it take to paint a house interior?",
+                a: "Timeline depends on project scope. A single room takes 1-2 days, a full home (5-7 rooms) takes 5-7 business days. We work efficiently while maintaining quality standards. Larger homes (3,000+ sq ft) may take 10-14 days. We always provide a detailed timeline in your quote and stick to our schedule."
+              },
+              {
+                q: "Do you move furniture before painting?",
+                a: "Yes! We move furniture away from walls, protect it with drop cloths, and return everything to its original position when done. We can work around heavy furniture like pianos or entertainment centers. If you have valuable or fragile items, we recommend relocating them beforehand for extra safety."
+              },
+              {
+                q: "What paint brands do you use for interior painting?",
+                a: "We primarily use Benjamin Moore paints - specifically Regal Select for walls and Advance for trim and cabinets. Benjamin Moore offers superior coverage, durability, and color retention. We can also work with Sherwin-Williams or your preferred brand if requested. All paints are low-VOC for indoor air quality."
+              },
+              {
+                q: "Do I need to be home while you paint?",
+                a: "No, you don't need to stay home. Many clients provide access and go about their day. We're fully insured and bonded. We'll communicate start/end times daily, send progress photos, and do a final walkthrough when you're available. Your home security is our priority."
+              },
+              {
+                q: "How do you protect floors and furniture?",
+                a: "We take protection seriously: heavy-duty canvas drop cloths (not plastic sheets that slip), furniture wrapped in protective film, floor runners in high-traffic areas, door jamb protection, and daily cleanup. We treat your home like our own and leave it cleaner than we found it."
+              },
+              {
+                q: "What's included in your surface prep work?",
+                a: "Professional prep is what separates a good paint job from a great one. We include: patching nail holes and cracks, sanding rough spots, caulking trim gaps, priming stained or new drywall, cleaning surfaces, taping crisp lines, and removing old peeling paint. Prep typically takes 30-40% of project time."
+              },
+              {
+                q: "Can you paint just one or two rooms?",
+                a: "Absolutely! We paint single rooms, entire floors, or whole homes - whatever you need. Single-room projects are perfect for testing colors or refreshing high-impact spaces like living rooms or master bedrooms. No project is too small for our team."
+              },
+              {
+                q: "Do you offer a warranty on interior painting?",
+                a: "Yes, we provide a 2-year workmanship warranty on all interior painting. If paint peels, cracks, or fails due to application issues, we'll fix it at no charge. This doesn't cover damage from water leaks, impacts, or normal wear. Benjamin Moore paint also comes with their manufacturer's warranty."
+              },
+              {
+                q: "Are you licensed and insured in Ontario?",
+                a: "Yes, Sudcan Painting is fully licensed, bonded, and insured in Ontario. We carry $2 million liability insurance and WSIB coverage for all crew members. You'll never have liability for accidents on your property. We can provide proof of insurance before starting work."
+              },
+              {
+                q: "What areas in Kitchener-Waterloo do you serve?",
+                a: "We serve all of Kitchener, Waterloo, Cambridge, and Guelph, including surrounding areas like New Hamburg, Elmira, and Baden. Our service radius is approximately 50km from Kitchener. If you're unsure whether we cover your location, call us at (226) 600-6637 - we'll let you know right away."
+              },
+              {
+                q: "How soon can you start my interior painting project?",
+                a: "Typical lead time is 1-3 weeks depending on season. Spring and summer (April-August) book faster. Fall and winter often have shorter wait times. Once we provide your quote and you approve, we'll schedule a start date. Rush projects may be available - contact us to discuss your timeline."
+              }
+            ].map((faq, i) => (
+              <Reveal key={i} delay={i * 0.05}>
+                <div
+                  className="p-6"
+                  style={{
+                    borderRadius: "1rem",
+                    background: "#F5F0E6",
+                    boxShadow: "0 2px 0 0 rgba(32,35,33,0.06), 0 6px 16px -4px rgba(32,35,33,0.10)",
+                    border: "1px solid rgba(198,161,91,0.12)",
+                  }}
+                >
+                  <h3 className="font-display text-lg text-[#202321]">{faq.q}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[#687967]">{faq.a}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.6}>
+            <div className="mt-12 text-center">
+              <p className="text-sm text-[#687967] mb-4">Still have questions? We're here to help.</p>
+              <a
+                href="tel:+12266006637"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white transition-all hover:-translate-y-0.5"
+                style={{
+                  borderRadius: "9999px",
+                  background: "linear-gradient(135deg, #B52E32 0%, #8f2125 100%)",
+                  boxShadow:
+                    "0 3px 0 0 rgba(130,20,23,0.75), 0 10px 28px -6px rgba(130,20,23,0.42), inset 0 1px 0 rgba(255,255,255,0.28)",
+                }}
+              >
+                <Phone size={16} />
+                Call (226) 600-6637
+              </a>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* ── RELATED SERVICES ── */}
