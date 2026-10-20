@@ -37,18 +37,18 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { 
-        title: "Professional Painting Services Kitchener ON | Residential & Commercial | Sudcan Painting" 
+        title: "Painters Kitchener Waterloo ON | House Painting Near Me | Sudcan" 
       },
       {
         name: "description",
         content:
-          "Professional painting, renovation & flooring services in Kitchener-Waterloo, Ontario. 18+ years experience. Licensed, insured painters. Free quotes. Call (226) 600-6637 today.",
+          "Top-rated painters in Kitchener-Waterloo. Interior & exterior house painting, cabinet refinishing. 500+ homes painted. Free quote (226) 600-6637. Licensed, 2-year warranty.",
       },
-      { name: "keywords", content: "painting services Kitchener, house painters Waterloo, interior painting Ontario, exterior painting Cambridge, cabinet refinishing, home renovation Kitchener, affordable painters near me, licensed painting contractors, residential painters Waterloo, commercial painters Ontario, free painting quote Kitchener" },
+      { name: "keywords", content: "painters kitchener, house painters waterloo, painting contractors near me, interior painters kitchener, exterior painting waterloo, cabinet painters kitchener, residential painters near me, best painters waterloo ontario, affordable painting services kitchener, licensed painters waterloo, house painting cost kitchener, painters near me waterloo, painting company kitchener waterloo, home painters cambridge ontario" },
       
       // Open Graph
-      { property: "og:title", content: "Professional Painting Services Kitchener ON | Sudcan Painting" },
-      { property: "og:description", content: "Professional painting, renovation & flooring in Kitchener-Waterloo. 18+ years experience. Licensed painters. Free quotes." },
+      { property: "og:title", content: "Top-Rated Painters Kitchener Waterloo | 500+ Homes Painted" },
+      { property: "og:description", content: "Best painters in Kitchener-Waterloo. Interior/exterior painting, cabinets. Licensed, 2-year warranty. Free quote (226) 600-6637." },
       { property: "og:image", content: "https://www.sudcanpainting.com/og-image.jpg" },
       { property: "og:url", content: "https://www.sudcanpainting.com/" },
       { property: "og:type", content: "website" },
@@ -57,8 +57,8 @@ export const Route = createFileRoute("/")({
       
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Professional Painting Services Kitchener ON | Sudcan Painting" },
-      { name: "twitter:description", content: "Professional painting, renovation & flooring in Kitchener-Waterloo. 18+ years experience." },
+      { name: "twitter:title", content: "Painters Kitchener Waterloo | House Painting Near Me" },
+      { name: "twitter:description", content: "500+ homes painted in Kitchener-Waterloo. Licensed painters. 2-year warranty. Free quotes." },
       { name: "twitter:image", content: "https://www.sudcanpainting.com/og-image.jpg" },
       
       // Canonical
@@ -327,9 +327,8 @@ function HomePage() {
 
           <Reveal delay={0.2}>
             <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] text-[#F5F0E6] text-balance md:text-7xl lg:text-8xl">
-              Your space deserves a{" "}
-              <span className="italic" style={{ color: "#B52E32" }}>fresh coat</span>{" "}
-              of perfection.
+              Kitchener's <span className="italic" style={{ color: "#B52E32" }}>trusted painters</span>{" "}
+              since 2008
             </h1>
           </Reveal>
 
@@ -340,8 +339,8 @@ function HomePage() {
               <div className="h-px w-12" style={{ background: "linear-gradient(90deg, #C6A15B, transparent)" }} />
             </div>
             <p className="mt-5 max-w-xl text-lg text-[#F5F0E6]/80">
-              Professional painting, renovation, and flooring across Canada.
-              Premium finishes, zero mess, lasting results.
+              House painters serving Kitchener-Waterloo. Interior & exterior painting, cabinet refinishing. 
+              Licensed, insured, 2-year warranty. Free in-home quote.
             </p>
           </Reveal>
 
