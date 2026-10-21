@@ -7,13 +7,13 @@ import { createBreadcrumbSchema } from "@/lib/schema";
 export const Route = createFileRoute("/services/cabinet-refinishing")({
   head: () => ({
     meta: [
-      { title: "Cabinet Refinishing Kitchener | Kitchen Cabinet Painting | Sudcan Painting" },
+      { title: "Cabinet Painters Kitchener | Kitchen Cabinet Refinishing Near Me" },
       {
         name: "description",
         content:
-          "Professional cabinet refinishing in Kitchener-Waterloo. Spray-painted cabinets at 1/3 the cost of replacement. Factory-smooth finish. Free quotes. (226) 600-6637.",
+          "Top cabinet painters Kitchener-Waterloo. Spray-painted cabinets, $3,500-$7,000. 1/3 replacement cost. Factory finish. Same-day quotes. 2-year warranty. (226) 600-6637.",
       },
-      { name: "keywords", content: "cabinet refinishing Kitchener, kitchen cabinet painting, cabinet spray painting, bathroom vanity painting, cabinet makeover Waterloo, affordable cabinet update, professional cabinet refinishing Ontario" },
+      { name: "keywords", content: "cabinet painters kitchener, kitchen cabinet refinishing near me, cabinet spray painting waterloo, kitchen cabinet painters, bathroom cabinet painting, cabinet refinishing cost kitchener, cabinet makeover near me, painted cabinets waterloo ontario, professional cabinet painters" },
       { property: "og:title", content: "Cabinet Refinishing Kitchener | Sudcan Painting" },
       { property: "og:url", content: "https://www.sudcanpainting.com/services/cabinet-refinishing" },
       { rel: "canonical", href: "https://www.sudcanpainting.com/services/cabinet-refinishing" },
@@ -39,12 +39,12 @@ function CabinetRefinishingPage() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <h1 className="max-w-4xl font-display text-5xl leading-[1.05] text-balance text-[#202321] md:text-7xl">
-              Cabinet Refinishing Kitchener — <span className="italic text-[#C6A15B]">New Kitchen, 1/3 the Cost</span>
+              Kitchen Cabinet Painters <span className="italic text-[#C6A15B]">Kitchener-Waterloo</span>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-2xl text-lg text-[#687967]">
-              Professional cabinet refinishing and spray painting. Transform your kitchen or bathroom at a fraction of replacement cost. Factory-smooth finish guaranteed.
+              Professional kitchen and bathroom cabinet spray painting near you. Save 60-70% vs replacement. Factory-smooth finish. 200+ kitchens transformed in Kitchener, Waterloo, Cambridge. 2-year warranty.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
