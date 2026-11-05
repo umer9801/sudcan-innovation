@@ -16,6 +16,7 @@ import {
   Sparkles,
   Brush,
   Clock,
+  Star,
 } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
@@ -81,8 +82,44 @@ const process = [
 const stats = [
   { value: "500+", label: "Projects Completed" },
   { value: "18+",  label: "Years of Experience" },
-  { value: "99%",  label: "Client Satisfaction" },
-  { value: "2yr",  label: "Workmanship Warranty" },
+  { value: "4.9★", label: "Average Rating" },
+  { value: "100%", label: "Satisfaction Rate" },
+];
+
+const whyChooseUs = [
+  { icon: Award, title: "Licensed & Insured", desc: "Fully licensed with $2M liability coverage. WSIB compliant, bonded for your peace of mind." },
+  { icon: ShieldCheck, title: "2-Year Warranty", desc: "Industry-leading warranty. If it peels, chips, or fades, we fix it free." },
+  { icon: CheckCircle2, title: "Zero-Mess Promise", desc: "Complete protection, daily cleanup, final deep clean. Your home stays spotless." },
+  { icon: Clock, title: "On-Time Guarantee", desc: "We start when promised. Single room: 1-2 days. Full home: 3-7 days." },
+];
+
+const ourProcess = [
+  { step: "1", title: "Free Consultation", desc: "We visit your home, assess the project, provide detailed written quote with no hidden fees." },
+  { step: "2", title: "Color Selection", desc: "Work with our color consultants. We provide samples and expert guidance." },
+  { step: "3", title: "Surface Prep", desc: "Proper prep is 80% of quality. We fill, sand, prime, and protect meticulously." },
+  { step: "4", title: "Expert Painting", desc: "Two coats minimum of premium Benjamin Moore or Sherwin-Williams paint." },
+  { step: "5", title: "Final Walkthrough", desc: "We inspect every inch with you, ensuring 100% satisfaction." },
+];
+
+const testimonials = [
+  {
+    name: "Sarah Mitchell",
+    location: "Forest Heights, Kitchener",
+    text: "Sudcan painted our entire house - inside and out. The attention to detail was incredible. They treated our home like it was their own.",
+    rating: 5,
+  },
+  {
+    name: "Michael Peterson",
+    location: "Uptown Waterloo",
+    text: "Best painting contractors in Waterloo! Finished our condo in 3 days, on budget, and it looks amazing. Highly recommend!",
+    rating: 5,
+  },
+  {
+    name: "Jennifer Lee",
+    location: "Preston, Cambridge",
+    text: "We've used Sudcan twice - kitchen cabinets and exterior. Both times exceeded expectations. Our neighbors asked for their number!",
+    rating: 5,
+  },
 ];
 
 function PortfolioCarousel() {
@@ -290,6 +327,84 @@ export default function HomePage() {
             </h2>
           </Reveal>
           <PortfolioCarousel />
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section style={{ background: "#F5F0E6" }} className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <span className="text-xs uppercase tracking-[0.25em] text-[#B52E32]">Why Sudcan</span>
+            <h2 className="mt-3 font-display text-4xl text-balance text-[#202321] md:text-5xl">
+              Why homeowners choose us
+            </h2>
+          </Reveal>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {whyChooseUs.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.1}>
+                <div className="rounded-2xl border border-[rgba(198,161,91,0.22)] bg-[#FFFDF8] p-6 transition-all hover:-translate-y-1">
+                  <item.icon size={32} className="text-[#B52E32]" />
+                  <h3 className="mt-4 font-display text-xl text-[#202321]">{item.title}</h3>
+                  <p className="mt-2 text-sm text-[#687967]">{item.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OUR PROCESS */}
+      <section style={{ background: "#FFFDF8" }} className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <span className="text-xs uppercase tracking-[0.25em] text-[#B52E32]">How we work</span>
+            <h2 className="mt-3 font-display text-4xl text-balance text-[#202321] md:text-5xl">
+              Our proven 5-step process
+            </h2>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+            {ourProcess.map((item, i) => (
+              <Reveal key={item.step} delay={i * 0.1}>
+                <div className="text-center">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, #C6A15B 0%, #a8843e 100%)" }}>
+                    <span className="font-display text-2xl text-[#202321]">{item.step}</span>
+                  </div>
+                  <h3 className="mt-4 font-display text-lg text-[#202321]">{item.title}</h3>
+                  <p className="mt-2 text-sm text-[#687967]">{item.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section style={{ background: "#35483A" }} className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <span className="text-xs uppercase tracking-[0.25em] text-[#C6A15B]">Client reviews</span>
+            <h2 className="mt-3 font-display text-4xl text-balance text-[#F5F0E6] md:text-5xl">
+              What our customers say
+            </h2>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((review, i) => (
+              <Reveal key={review.name} delay={i * 0.1}>
+                <div className="rounded-2xl border border-[rgba(198,161,91,0.22)] bg-[#2C3C30] p-6">
+                  <div className="flex gap-1">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <span key={i} className="text-[#C6A15B]">★</span>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-[#F5F0E6]">"{review.text}"</p>
+                  <div className="mt-4 text-sm">
+                    <div className="font-medium text-[#F5F0E6]">{review.name}</div>
+                    <div className="text-[#687967]">{review.location}</div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
