@@ -1,21 +1,41 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "dist",
   "framework": null,
-  "redirects": [
+  "installCommand": "npm install --legacy-peer-deps",
+  "devCommand": "npm run dev",
+  "headers": [
     {
-      "source": "/:path*",
-      "has": [
+      "source": "/(.*)",
+      "headers": [
         {
-          "type": "host",
-          "value": "sudcan-innovation.vercel.app"
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
         }
-      ],
-      "destination": "https://www.sudcanpainting.com/:path*",
-      "permanent": true
+      ]
     }
   ],
-  "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
