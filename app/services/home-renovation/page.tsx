@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home Renovation Kitchener-Waterloo | Full House Remodeling",
+  description: "Complete home renovation in Kitchener-Waterloo. Painting, flooring, kitchen, bathroom. Licensed contractors. 2-year warranty. Free quote (226) 600-6637.",
+  keywords: ["home renovation kitchener", "house remodeling waterloo", "renovation contractors ontario", "home improvement"],
+  openGraph: {
+    title: "Home Renovation Kitchener-Waterloo | Sudcan Painting",
+    description: "Transform your entire home with professional renovation services. Painting, flooring, kitchen, bath.",
+    images: [{
+      url: '/assets/home-renovation-complete-transformation.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Home Renovation Complete Transformation'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

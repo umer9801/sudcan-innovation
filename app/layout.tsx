@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sudcanpainting.com'),
@@ -52,6 +53,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
       <body>
         {children}
       </body>

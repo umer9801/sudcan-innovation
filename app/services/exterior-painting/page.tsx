@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Exterior Painting Kitchener-Waterloo | House Painters Ontario",
+  description: "Expert exterior house painting in Kitchener-Waterloo. Weather-resistant coatings for Canadian climate. Licensed painters. 2-year warranty. Free quote (226) 600-6637.",
+  keywords: ["exterior painting kitchener", "house painting waterloo", "exterior painters ontario", "home painting services"],
+  openGraph: {
+    title: "Exterior House Painting Kitchener-Waterloo | Sudcan Painting",
+    description: "Protect and beautify your home with durable exterior painting. Premium weather-resistant coatings.",
+    images: [{
+      url: '/assets/exterior-house-painting-waterloo.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Exterior House Painting Waterloo'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Interior Painting Kitchener-Waterloo | House Painters Near Me",
+  description: "Professional interior house painting in Kitchener-Waterloo. 500+ rooms painted. Premium Benjamin Moore paints. Licensed painters. 2-year warranty. Free quote (226) 600-6637.",
+  keywords: ["interior painting kitchener", "house painters waterloo", "interior painters near me", "room painting kitchener", "residential painting"],
+  openGraph: {
+    title: "Interior Painting Services Kitchener-Waterloo | Sudcan Painting",
+    description: "Transform your home with expert interior painting. Premium paints, meticulous prep, zero-mess process. 500+ satisfied customers.",
+    images: [{
+      url: '/assets/interior-painting-living-room-kitchener.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Interior Painting Living Room Kitchener'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

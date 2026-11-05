@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vinyl Flooring Kitchener-Waterloo | LVP Installation Ontario",
+  description: "Expert vinyl & LVP flooring installation in Kitchener-Waterloo. Waterproof, durable, affordable. Licensed installers. Free quote (226) 600-6637.",
+  keywords: ["vinyl flooring kitchener", "lvp installation waterloo", "luxury vinyl plank", "flooring contractors ontario"],
+  openGraph: {
+    title: "Vinyl & LVP Flooring Installation Kitchener-Waterloo | Sudcan",
+    description: "Beautiful, waterproof vinyl flooring installed by professionals. Perfect for basements and kitchens.",
+    images: [{
+      url: '/assets/vinyl-flooring-installation-basement.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Vinyl Flooring Installation Basement'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

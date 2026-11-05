@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kitchen Remodeling Kitchener-Waterloo | Kitchen Renovation",
+  description: "Complete kitchen remodeling in Kitchener-Waterloo. Cabinets, countertops, backsplash, painting. Licensed contractors. Free quote (226) 600-6637.",
+  keywords: ["kitchen remodeling kitchener", "kitchen renovation waterloo", "kitchen contractors near me", "kitchen makeover"],
+  openGraph: {
+    title: "Kitchen Remodeling Kitchener-Waterloo | Sudcan Painting",
+    description: "Transform your kitchen with expert remodeling. Cabinets, countertops, painting, and more.",
+    images: [{
+      url: '/assets/kitchen-remodeling-countertop-backsplash.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Kitchen Remodeling Countertop Backsplash'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

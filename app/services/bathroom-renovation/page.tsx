@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bathroom Renovation Kitchener-Waterloo | Bathroom Remodeling",
+  description: "Expert bathroom renovation in Kitchener-Waterloo. Tile, vanity, painting, fixtures. Licensed contractors. 2-year warranty. Free quote (226) 600-6637.",
+  keywords: ["bathroom renovation kitchener", "bathroom remodeling waterloo", "bathroom contractors near me", "bathroom makeover"],
+  openGraph: {
+    title: "Bathroom Renovation Kitchener-Waterloo | Sudcan Painting",
+    description: "Transform your bathroom with professional renovation. Tile, painting, fixtures, and more.",
+    images: [{
+      url: '/assets/bathroom-renovation-tile-work-cambridge.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Bathroom Renovation Tile Work Cambridge'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

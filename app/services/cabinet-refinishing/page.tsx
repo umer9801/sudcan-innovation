@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cabinet Refinishing Kitchener-Waterloo | Kitchen Cabinet Painting",
+  description: "Professional cabinet refinishing in Kitchener-Waterloo. Transform your kitchen cabinets. Save 70% vs replacement. Licensed painters. Free quote (226) 600-6637.",
+  keywords: ["cabinet refinishing kitchener", "kitchen cabinet painting waterloo", "cabinet painters near me", "cabinet refacing"],
+  openGraph: {
+    title: "Cabinet Refinishing & Painting Kitchener-Waterloo | Sudcan",
+    description: "New kitchen, same footprint. Professional cabinet refinishing with showroom-quality finish.",
+    images: [{
+      url: '/assets/kitchen-cabinet-refinishing-before-after.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Kitchen Cabinet Refinishing Before After'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

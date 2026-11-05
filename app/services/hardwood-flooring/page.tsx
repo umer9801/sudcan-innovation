@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hardwood Flooring Kitchener-Waterloo | Floor Installation Ontario",
+  description: "Professional hardwood floor installation & refinishing in Kitchener-Waterloo. Oak, maple, engineered floors. Licensed installers. Free quote (226) 600-6637.",
+  keywords: ["hardwood flooring kitchener", "floor installation waterloo", "hardwood refinishing ontario", "flooring contractors"],
+  openGraph: {
+    title: "Hardwood Flooring Kitchener-Waterloo | Sudcan Painting",
+    description: "Beautiful hardwood floors installed by experts. Installation, refinishing, and restoration.",
+    images: [{
+      url: '/assets/hardwood-floor-installation-living-room.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Hardwood Floor Installation Living Room'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },

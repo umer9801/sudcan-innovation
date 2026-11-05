@@ -20,6 +20,8 @@ import {
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 
+// Metadata for homepage is in layout.tsx
+
 const heroImages = [
   "/assets/home-renovation-complete-transformation.webp",
   "/assets/exterior-siding-painting-residential-ontario.webp",

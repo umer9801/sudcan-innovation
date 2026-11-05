@@ -2,6 +2,23 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tile Installation Kitchener-Waterloo | Bathroom & Kitchen Tiling",
+  description: "Professional tile installation in Kitchener-Waterloo. Bathrooms, kitchens, backsplash. Ceramic & porcelain. Licensed installers. Free quote (226) 600-6637.",
+  keywords: ["tile installation kitchener", "bathroom tiling waterloo", "kitchen backsplash", "tile contractors ontario"],
+  openGraph: {
+    title: "Tile Installation Kitchener-Waterloo | Sudcan Painting",
+    description: "Expert tile installation for bathrooms, kitchens, and more. Precision craftsmanship.",
+    images: [{
+      url: '/assets/tile-installation-shower-bathroom.webp',
+      width: 1200,
+      height: 630,
+      alt: 'Tile Installation Shower Bathroom'
+    }]
+  }
+};
 
 const benefits = [
   { title: "Premium Benjamin Moore Paint", desc: "Top-tier paints with superior coverage and lasting color" },
