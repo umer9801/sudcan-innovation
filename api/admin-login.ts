@@ -29,7 +29,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).json({ success: false });
   } catch (err) {
     if (err instanceof z.ZodError) {
-      return res.status(400).json({ error: err.errors });
+      return res.status(400).json({ error: err.issues });
     }
     return res.status(500).json({ error: "Internal server error" });
   }

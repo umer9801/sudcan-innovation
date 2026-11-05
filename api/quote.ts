@@ -166,7 +166,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).json({ success: true, id: doc._id.toString() });
   } catch (err) {
     console.error("[quote] ERROR:", err);
-    if (err instanceof z.ZodError) return res.status(400).json({ error: err.errors });
+    if (err instanceof z.ZodError) return res.status(400).json({ error: err.issues });
     const message = err instanceof Error ? err.message : String(err);
     return res.status(500).json({ error: "Internal server error", detail: message });
   }
