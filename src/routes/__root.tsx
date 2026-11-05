@@ -4,6 +4,8 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  HeadContent,
+  Scripts,
 } from "@tanstack/react-router";
 
 function NotFoundComponent() {
@@ -74,7 +76,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <HeadContent />
       <Outlet />
+      <Scripts />
     </QueryClientProvider>
   );
 }
