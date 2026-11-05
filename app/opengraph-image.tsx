@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
+// export const runtime = 'edge'; // Removed - not compatible with cacheComponents
 export const alt = 'Sudcan Painting - Professional Painters in Kitchener-Waterloo Ontario';
 export const size = {
   width: 1200,
